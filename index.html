@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Maabare — A crossing point between France and the Gulf</title>
-<meta name="description" content="Maabare is a private brokerage connecting French real estate with Gulf Arab buyers — and Gulf developments with French capital." />
+<title>Maabare — A crossing point between France and MENA</title>
+<meta name="description" content="Maabare runs multilingual cold outreach connecting French real estate sellers with MENA buyers — and MENA investors with French opportunities." />
 <meta name="theme-color" content="#f4e8c1" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#14080f" media="(prefers-color-scheme: dark)" />
 
-<meta property="og:title" content="Maabare — A crossing point between France and the Gulf" />
-<meta property="og:description" content="Private Franco–Gulf real estate brokerage." />
+<meta property="og:title" content="Maabare — A crossing point between France and MENA" />
+<meta property="og:description" content="Private Franco–MENA cold outreach desk for real estate." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://maabare.com/" />
 
@@ -311,7 +311,7 @@
   /* Scroll cue */
   .scroll-cue {
     position: absolute;
-    bottom: 28px;
+    bottom: 10px;
     left: 50%; transform: translateX(-50%);
     color: var(--muted);
     font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
@@ -924,13 +924,13 @@
       <div>
         <div class="hero-eyebrow eyebrow">
           <svg class="star"><use href="#i-star"/></svg>
-          <span data-i18n="hero.eyebrow">Private Franco–Gulf brokerage</span>
+          <span data-i18n="hero.eyebrow">Private Franco–MENA outreach desk</span>
         </div>
         <h1 class="hero-title" id="heroTitle">
           <span class="word">A</span> <span class="word">crossing</span> <span class="word">point.</span>
         </h1>
-        <p class="hero-sub" data-i18n-html="hero.sub">Between France <span class="amp">&amp;</span> the Gulf.</p>
-        <p class="hero-lede" data-i18n="hero.lede">Maabare connects French real estate agencies and developers with Gulf Arab buyers — and Gulf-based investors with select French opportunities. Multilingual. Discreet. Direct.</p>
+        <p class="hero-sub" data-i18n-html="hero.sub">Between France <span class="amp">&amp;</span> MENA.</p>
+        <p class="hero-lede" data-i18n="hero.lede">Maabare runs multilingual cold outreach for French real estate sellers seeking MENA buyers — and for MENA investors seeking French opportunities. Email and LinkedIn DMs. Three languages. One desk.</p>
         <div class="hero-cta-wrap">
           <a href="#contact" class="btn-primary">
             <span data-i18n="hero.cta">Begin a conversation</span>
@@ -945,18 +945,38 @@
             <defs>
               <path id="seal-ring" d="M 120,28 a 92,92 0 1,1 -0.001,0"/>
             </defs>
+            <!-- Outer ring -->
             <circle cx="120" cy="120" r="110" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <!-- Curved text on the rim -->
             <text font-family="Inter, sans-serif" font-size="9.2" font-weight="600" letter-spacing="3.2" fill="currentColor">
-              <textPath href="#seal-ring" startOffset="0">MAABARE · EST. 2026 · CROSSING POINT · MAABARE · EST. 2026 · CROSSING POINT</textPath>
+              <textPath href="#seal-ring" startOffset="0">MAABARE · معبر · CROSSING POINT · MAABARE · معبر · CROSSING POINT</textPath>
             </text>
-            <circle cx="120" cy="120" r="74" fill="none" stroke="currentColor" stroke-width="0.9" opacity="0.8"/>
-            <circle cx="120" cy="120" r="68" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+            <!-- Inner concentric rings (astrolabe feel) -->
+            <circle cx="120" cy="120" r="86" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.4"/>
+            <circle cx="120" cy="120" r="74" fill="none" stroke="currentColor" stroke-width="0.9" opacity="0.85"/>
+
+            <!-- Compass rose -->
             <g transform="translate(120,120)">
-              <rect x="-44" y="-44" width="88" height="88" fill="none" stroke="currentColor" stroke-width="1.3"/>
-              <rect x="-44" y="-44" width="88" height="88" fill="none" stroke="currentColor" stroke-width="1.3" transform="rotate(45)"/>
-              <path d="M 0,-22 L 4,-6 L 22,-2 L 8,8 L 14,24 L 0,14 L -14,24 L -8,8 L -22,-2 L -4,-6 Z" fill="none" stroke="currentColor" stroke-width="1.1"/>
-              <circle cx="0" cy="0" r="3.4" fill="currentColor"/>
+              <!-- Four cardinal arrows (filled, prominent) -->
+              <g fill="currentColor">
+                <path d="M 0,-64 L 9,-3 L 0,3 L -9,-3 Z"/>
+                <path d="M 0,64 L 9,3 L 0,-3 L -9,3 Z"/>
+                <path d="M 64,0 L 3,9 L -3,0 L 3,-9 Z"/>
+                <path d="M -64,0 L -3,9 L 3,0 L -3,-9 Z"/>
+              </g>
+              <!-- Four intercardinal lines (subtle) -->
+              <g stroke="currentColor" stroke-width="1.1" opacity="0.55">
+                <line x1="14" y1="-14" x2="42" y2="-42"/>
+                <line x1="-14" y1="-14" x2="-42" y2="-42"/>
+                <line x1="14" y1="14" x2="42" y2="42"/>
+                <line x1="-14" y1="14" x2="-42" y2="42"/>
+              </g>
+              <!-- Center: the crossing point -->
+              <circle cx="0" cy="0" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
+              <circle cx="0" cy="0" r="3.6" fill="currentColor"/>
             </g>
+
+            <!-- Outer cardinal tick marks beyond the rim -->
             <g stroke="currentColor" stroke-width="0.8" opacity="0.5">
               <line x1="120" y1="14" x2="120" y2="22"/>
               <line x1="120" y1="218" x2="120" y2="226"/>
@@ -972,7 +992,7 @@
       <div class="marker-cap" aria-hidden="true"><svg class="star"><use href="#i-star"/></svg></div>
       <div class="marker">
         <div class="label" data-i18n="hero.m1.label">Two markets</div>
-        <div class="value">FR · GCC</div>
+        <div class="value">FR · MENA</div>
       </div>
       <div class="marker">
         <div class="label" data-i18n="hero.m2.label">Three languages</div>
@@ -1047,7 +1067,7 @@
               <text x="59" y="134" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" letter-spacing="1.6" font-weight="600" fill="currentColor">FRANÇAISE</text>
             </g>
 
-            <!-- Gulf stamp -->
+            <!-- MENA stamp -->
             <g transform="translate(1084, 78)">
               <rect x="0" y="0" width="118" height="148" fill="none" stroke="currentColor" stroke-width="1.2"/>
               <g fill="currentColor" opacity="0.6">
@@ -1058,8 +1078,8 @@
               </g>
               <rect x="8" y="8" width="102" height="132" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
               <g transform="translate(59, 90) scale(0.95)"><use href="#i-dome" x="-28" y="-62"/></g>
-              <text x="59" y="124" text-anchor="middle" font-family="Tajawal, sans-serif" font-size="14" font-weight="700" fill="currentColor">الخليج</text>
-              <text x="59" y="138" text-anchor="middle" font-family="Inter, sans-serif" font-size="6.5" letter-spacing="1.6" font-weight="600" fill="currentColor">THE GULF</text>
+              <text x="59" y="124" text-anchor="middle" font-family="Tajawal, sans-serif" font-size="14" font-weight="700" fill="currentColor">MENA</text>
+              <text x="59" y="138" text-anchor="middle" font-family="Inter, sans-serif" font-size="6.5" letter-spacing="1.6" font-weight="600" fill="currentColor">REGION</text>
             </g>
 
             <!-- Sun + معبر -->
@@ -1143,7 +1163,7 @@
 
             <text x="640" y="468" text-anchor="middle" font-family="Shrikhand, serif" font-size="20" letter-spacing="1.2" fill="currentColor">Maabare</text>
             <text x="410" y="458" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" letter-spacing="4" font-weight="600" fill="currentColor" opacity="0.7" data-i18n="crossing.label.france">FRANCE</text>
-            <text x="900" y="458" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" letter-spacing="4" font-weight="600" fill="currentColor" opacity="0.7" data-i18n="crossing.label.gulf">THE GULF</text>
+            <text x="900" y="458" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" letter-spacing="4" font-weight="600" fill="currentColor" opacity="0.7" data-i18n="crossing.label.gulf">MENA</text>
           </svg>
         </div>
       </div>
@@ -1158,12 +1178,12 @@
         <div class="crossing-step reveal">
           <div class="step-num">02</div>
           <h3 data-i18n="crossing.s2.h">Two markets, one threshold.</h3>
-          <p data-i18n="crossing.s2.p">For French sellers, the Gulf market is opaque: high intent, scattered networks, language friction. For Gulf buyers, French real estate is rich in opportunity but heavy with regulation and unspoken local custom.</p>
+          <p data-i18n="crossing.s2.p">For French sellers, MENA buyers sit behind language and channel barriers — scattered across networks, hard to reach in their language. For MENA investors, French sellers are reachable in theory but rarely surface in their inbox.</p>
         </div>
         <div class="crossing-step reveal">
           <div class="step-num">03</div>
           <h3 data-i18n="crossing.s3.h">We sit precisely on that line.</h3>
-          <p data-i18n="crossing.s3.p">Our work is to translate — not just words, but expectations, timelines, and trust. One desk, three languages, both sides handled with equal care.</p>
+          <p data-i18n="crossing.s3.p">Our work is to open doors — multilingual cold outreach, by email and LinkedIn DMs, that puts qualified contacts in front of you. The introduction is where our role ends and yours begins.</p>
         </div>
       </div>
     </div>
@@ -1185,7 +1205,7 @@
       <div class="num-cell">
         <span class="num-big" data-count="2">0</span>
         <div class="label" data-i18n="numbers.l1">Markets</div>
-        <p data-i18n="numbers.p1">France and the Gulf Cooperation Council, served end-to-end.</p>
+        <p data-i18n="numbers.p1">France and MENA — outreach handled in both directions.</p>
       </div>
       <div class="num-cell">
         <span class="num-big" data-count="3">0</span>
@@ -1231,14 +1251,14 @@
         </div>
         <div class="ticket-perf"></div>
         <div class="ticket-body">
-          <div class="ticket-direction" data-i18n="corridors.dir1">France → Gulf</div>
+          <div class="ticket-direction" data-i18n="corridors.dir1">France → MENA</div>
           <h3 data-i18n="corridors.h1">For French agencies and developers.</h3>
-          <p data-i18n="corridors.p1">We bring qualified Gulf Arab buyers — private investors, family offices, and ultra-high-net-worth individuals — to your French listings and developments.</p>
+          <p data-i18n="corridors.p1">Multilingual cold outreach to MENA-based buyers — qualified prospects delivered straight to your inbox. Once the introduction lands, the conversation is yours to run.</p>
           <ul>
-            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f1">Buyer sourcing and qualification across GCC markets</span></li>
-            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f2">Multilingual presentation of your inventory in Arabic and English</span></li>
-            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f3">Cultural and linguistic mediation through to closing</span></li>
-            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f4">Confidential off-market introductions where appropriate</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f1">Cold email and LinkedIn DM outreach in Arabic, French, and English</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f2">MENA prospect lists built and qualified — private investors, family offices, HNW individuals</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f3">Native-speaker outreach copy across every sequence</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f4">Qualified introductions delivered to your inbox — handoff is where we stop</span></li>
           </ul>
         </div>
       </article>
@@ -1250,14 +1270,14 @@
         </div>
         <div class="ticket-perf"></div>
         <div class="ticket-body">
-          <div class="ticket-direction" data-i18n="corridors.dir2">Gulf → France</div>
-          <h3 data-i18n="corridors.h2">For Gulf-based investors and buyers.</h3>
-          <p data-i18n="corridors.p2">We open the French market to you on your terms — properties pre-vetted, paperwork demystified, French intermediaries handled in your language.</p>
+          <div class="ticket-direction" data-i18n="corridors.dir2">MENA → France</div>
+          <h3 data-i18n="corridors.h2">For MENA-based investors and buyers.</h3>
+          <p data-i18n="corridors.p2">Multilingual cold outreach to French agencies, developers, and notaires — putting their inventory and projects on your radar. From the introduction forward, you handle it directly.</p>
           <ul>
-            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g1">Curated access to French residential and investment property</span></li>
-            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g2">Direct-line communication with developers, notaires, and agents</span></li>
-            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g3">Transparent navigation of French legal and tax frameworks</span></li>
-            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g4">End-to-end advisory in Arabic, French, or English</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g1">Cold email and LinkedIn DM outreach in French and English</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g2">Targeted lists of French agencies, developers, and notaires</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g3">Native-speaker outreach copy in your preferred language</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g4">Direct introductions to your inbox — you take the conversation from there</span></li>
           </ul>
         </div>
       </article>
@@ -1316,7 +1336,7 @@
       <span class="en">Hello.</span>
     </div>
     <div class="reveal">
-      <p class="contact-lede" data-i18n="contact.lede">Whether you are a French developer seeking Gulf demand, or a Gulf-based principal seeking French opportunities, the door opens with a single message. Replies are personal and prompt.</p>
+      <p class="contact-lede" data-i18n="contact.lede">Whether you are a French developer seeking MENA buyers, or a MENA-based principal seeking French opportunities, the door opens with a single message. Replies are personal and prompt.</p>
     </div>
 
     <a class="envelope reveal" href="mailto:omar@maabare.com">
@@ -1349,12 +1369,12 @@
   const I18N = {
     en: {
       "nav.about": "The Crossing", "nav.services": "Corridors", "nav.approach": "Approach", "nav.contact": "Contact",
-      "hero.eyebrow": "Private Franco–Gulf brokerage",
+      "hero.eyebrow": "Private Franco–MENA outreach desk",
       "hero.title.1": "A", "hero.title.2": "crossing", "hero.title.3": "point.",
-      "hero.sub": "Between France <span class=\"amp\">&amp;</span> the Gulf.",
-      "hero.lede": "Maabare connects French real estate agencies and developers with Gulf Arab buyers — and Gulf-based investors with select French opportunities. Multilingual. Discreet. Direct.",
+      "hero.sub": "Between France <span class=\"amp\">&amp;</span> MENA.",
+      "hero.lede": "Maabare runs multilingual cold outreach for French real estate sellers seeking MENA buyers — and for MENA investors seeking French opportunities. Email and LinkedIn DMs. Three languages. One desk.",
       "hero.cta": "Begin a conversation",
-      "hero.m1.label": "Two markets", "hero.m2.label": "Three languages", "hero.m3.label": "One desk", "hero.m3.value": "Direct · Discreet",
+      "hero.m1.label": "Two markets", "hero.m2.label": "Three languages", "hero.m3.label": "One desk", "hero.m3.value": "Cold outreach",
       "scroll": "Scroll",
       "name.eyebrow": "From the Arabic", "name.translit": "Maʿbar — a crossing point",
       "name.context": "A passage between two places that would otherwise remain apart.",
@@ -1362,46 +1382,46 @@
       "crossing.s1.h": "From the word, the work.",
       "crossing.s1.p": "Maabare takes its name from the Arabic <strong>معبر</strong> (<em>maʿbar</em>) — a crossing point. A passage between two places that would otherwise remain apart.",
       "crossing.s2.h": "Two markets, one threshold.",
-      "crossing.s2.p": "For French sellers, the Gulf market is opaque: high intent, scattered networks, language friction. For Gulf buyers, French real estate is rich in opportunity but heavy with regulation and unspoken local custom.",
+      "crossing.s2.p": "For French sellers, MENA buyers sit behind language and channel barriers — scattered across networks, hard to reach in their language. For MENA investors, French sellers are reachable in theory but rarely surface in their inbox.",
       "crossing.s3.h": "We sit precisely on that line.",
-      "crossing.s3.p": "Our work is to translate — not just words, but expectations, timelines, and trust. One desk, three languages, both sides handled with equal care.",
-      "crossing.label.france": "FRANCE", "crossing.label.gulf": "THE GULF",
+      "crossing.s3.p": "Our work is to open doors — multilingual cold outreach, by email and LinkedIn DMs, that puts qualified contacts in front of you. The introduction is where our role ends and yours begins.",
+      "crossing.label.france": "FRANCE", "crossing.label.gulf": "MENA",
       "numbers.eyebrow": "The desk", "numbers.title": "In numbers.",
-      "numbers.l1": "Markets", "numbers.p1": "France and the Gulf Cooperation Council, served end-to-end.",
+      "numbers.l1": "Markets", "numbers.p1": "France and MENA — outreach handled in both directions.",
       "numbers.l2": "Languages", "numbers.p2": "Français, العربية, English — native level, no translation drift.",
       "numbers.l3": "Desk", "numbers.p3": "A single point of contact across both jurisdictions.",
-      "marquee.text": "Discretion ✦ Native fluency ✦ Pre-qualified flow ✦ Direct, not layered ✦",
+      "marquee.text": "Cold outreach ✦ Native fluency ✦ Qualified leads ✦ Direct, not layered ✦",
       "corridors.eyebrow": "The Work", "corridors.title": "Two corridors.",
-      "corridors.lede": "Both directions are handled with the same single desk, the same languages, the same standard of care. No relays. No translation telephone.",
-      "corridors.dir1": "France → Gulf", "corridors.h1": "For French agencies and developers.",
-      "corridors.p1": "We bring qualified Gulf Arab buyers — private investors, family offices, and ultra-high-net-worth individuals — to your French listings and developments.",
-      "corridors.f1": "Buyer sourcing and qualification across GCC markets",
-      "corridors.f2": "Multilingual presentation of your inventory in Arabic and English",
-      "corridors.f3": "Cultural and linguistic mediation through to closing",
-      "corridors.f4": "Confidential off-market introductions where appropriate",
-      "corridors.dir2": "Gulf → France", "corridors.h2": "For Gulf-based investors and buyers.",
-      "corridors.p2": "We open the French market to you on your terms — properties pre-vetted, paperwork demystified, French intermediaries handled in your language.",
-      "corridors.g1": "Curated access to French residential and investment property",
-      "corridors.g2": "Direct-line communication with developers, notaires, and agents",
-      "corridors.g3": "Transparent navigation of French legal and tax frameworks",
-      "corridors.g4": "End-to-end advisory in Arabic, French, or English",
+      "corridors.lede": "Both directions are run from the same desk, in the same languages, with the same outreach craft. We surface qualified leads. The relationship that follows is yours.",
+      "corridors.dir1": "France → MENA", "corridors.h1": "For French agencies and developers.",
+      "corridors.p1": "Multilingual cold outreach to MENA-based buyers — qualified prospects delivered straight to your inbox. Once the introduction lands, the conversation is yours to run.",
+      "corridors.f1": "Cold email and LinkedIn DM outreach in Arabic, French, and English",
+      "corridors.f2": "MENA prospect lists built and qualified — private investors, family offices, HNW individuals",
+      "corridors.f3": "Native-speaker outreach copy across every sequence",
+      "corridors.f4": "Qualified introductions delivered to your inbox — handoff is where we stop",
+      "corridors.dir2": "MENA → France", "corridors.h2": "For MENA-based investors and buyers.",
+      "corridors.p2": "Multilingual cold outreach to French agencies, developers, and notaires — putting their inventory and projects on your radar. From the introduction forward, you handle it directly.",
+      "corridors.g1": "Cold email and LinkedIn DM outreach in French and English",
+      "corridors.g2": "Targeted lists of French agencies, developers, and notaires",
+      "corridors.g3": "Native-speaker outreach copy in your preferred language",
+      "corridors.g4": "Direct introductions to your inbox — you take the conversation from there",
       "approach.eyebrow": "Approach", "approach.title": "Four principles, one desk.",
-      "approach.h1": "Discretion", "approach.p1": "Names, prices, and intent travel only between the parties who need to know.",
-      "approach.h2": "Native fluency", "approach.p2": "Every conversation, document, and negotiation moves through French, Arabic, or English without translation drift.",
-      "approach.h3": "Pre-qualified flow", "approach.p3": "Only buyers and listings that match — saving both sides from mismatched expectations.",
-      "approach.h4": "Direct, not layered", "approach.p4": "A single point of contact across both jurisdictions. No relay chains. No diluted accountability.",
+      "approach.h1": "Discretion", "approach.p1": "Lists, targeting, and outreach copy stay between the desk and the client. Nothing travels further.",
+      "approach.h2": "Native fluency", "approach.p2": "Every email, every DM, every cold-outreach message moves through French, Arabic, or English without translation drift.",
+      "approach.h3": "Qualified flow", "approach.p3": "Only prospects that match — outreach that surfaces real intent, not noise.",
+      "approach.h4": "Direct, not layered", "approach.p4": "One desk runs the outreach, end to end. No agencies, no relays, no diluted message.",
       "contact.eyebrow": "Contact",
-      "contact.lede": "Whether you are a French developer seeking Gulf demand, or a Gulf-based principal seeking French opportunities, the door opens with a single message. Replies are personal and prompt.",
+      "contact.lede": "Whether you are a French developer seeking MENA buyers, or a MENA-based principal seeking French opportunities, the door opens with a single message. Replies are personal and prompt.",
       "contact.write": "Write to", "footer.rights": "All rights reserved."
     },
     fr: {
       "nav.about": "Le Passage", "nav.services": "Corridors", "nav.approach": "Approche", "nav.contact": "Contact",
-      "hero.eyebrow": "Conseil privé · immobilier franco-golfique",
+      "hero.eyebrow": "Bureau privé · prospection franco-MENA",
       "hero.title.1": "Un", "hero.title.2": "point", "hero.title.3": "de", "hero.title.4": "passage.",
-      "hero.sub": "Entre la France <span class=\"amp\">&amp;</span> le Golfe.",
-      "hero.lede": "Maabare met en relation agences et promoteurs français avec des acheteurs du Golfe — et investisseurs du Golfe avec une sélection d'opportunités françaises. Multilingue. Discret. Direct.",
+      "hero.sub": "Entre la France <span class=\"amp\">&amp;</span> MENA.",
+      "hero.lede": "Maabare mène une prospection à froid multilingue pour les vendeurs immobiliers français cherchant des acheteurs MENA — et pour les investisseurs MENA cherchant des opportunités françaises. Email et messages LinkedIn. Trois langues. Un bureau.",
       "hero.cta": "Engager la conversation",
-      "hero.m1.label": "Deux marchés", "hero.m2.label": "Trois langues", "hero.m3.label": "Un seul bureau", "hero.m3.value": "Direct · Discret",
+      "hero.m1.label": "Deux marchés", "hero.m2.label": "Trois langues", "hero.m3.label": "Un seul bureau", "hero.m3.value": "Prospection à froid",
       "scroll": "Faire défiler",
       "name.eyebrow": "De l'arabe", "name.translit": "Maʿbar — un point de passage",
       "name.context": "Un lien entre deux rives qui resteraient autrement séparées.",
@@ -1409,46 +1429,46 @@
       "crossing.s1.h": "Du mot, le travail.",
       "crossing.s1.p": "Maabare tire son nom de l'arabe <strong>معبر</strong> (<em>maʿbar</em>) — un point de passage. Un lien entre deux rives qui resteraient autrement séparées.",
       "crossing.s2.h": "Deux marchés, un seul seuil.",
-      "crossing.s2.p": "Pour les vendeurs français, le marché du Golfe est opaque : forte intention, réseaux dispersés, barrière linguistique. Pour les acheteurs du Golfe, l'immobilier français regorge d'opportunités mais reste chargé de réglementations et de codes implicites.",
+      "crossing.s2.p": "Pour les vendeurs français, les acheteurs MENA sont éparpillés à travers réseaux, langues et canaux — difficiles à atteindre dans leur langue. Pour les investisseurs MENA, les vendeurs français existent en théorie mais apparaissent rarement dans leur boîte de réception.",
       "crossing.s3.h": "Nous nous tenons précisément sur cette ligne.",
-      "crossing.s3.p": "Notre travail est de traduire — non seulement les mots, mais les attentes, les délais et la confiance. Un bureau, trois langues, les deux côtés traités avec un soin égal.",
-      "crossing.label.france": "LA FRANCE", "crossing.label.gulf": "LE GOLFE",
+      "crossing.s3.p": "Notre travail est d'ouvrir des portes — une prospection à froid multilingue, par email et messages LinkedIn, qui amène des contacts qualifiés jusqu'à vous. La présentation est l'endroit où notre rôle s'arrête et où le vôtre commence.",
+      "crossing.label.france": "LA FRANCE", "crossing.label.gulf": "MENA",
       "numbers.eyebrow": "Le bureau", "numbers.title": "En chiffres.",
-      "numbers.l1": "Marchés", "numbers.p1": "La France et le Conseil de coopération du Golfe, servis de bout en bout.",
+      "numbers.l1": "Marchés", "numbers.p1": "La France et la zone MENA — prospection menée dans les deux sens.",
       "numbers.l2": "Langues", "numbers.p2": "Français, العربية, English — niveau natif, sans perte de traduction.",
       "numbers.l3": "Bureau", "numbers.p3": "Un interlocuteur unique sur les deux juridictions.",
-      "marquee.text": "Discrétion ✦ Maîtrise native ✦ Flux pré-qualifié ✦ Direct, sans intermédiaires ✦",
+      "marquee.text": "Prospection à froid ✦ Maîtrise native ✦ Leads qualifiés ✦ Direct, sans intermédiaires ✦",
       "corridors.eyebrow": "Le Travail", "corridors.title": "Deux corridors.",
-      "corridors.lede": "Les deux sens sont gérés depuis le même bureau, dans les mêmes langues, avec le même soin. Aucun relais. Aucun téléphone arabe.",
-      "corridors.dir1": "France → Golfe", "corridors.h1": "Pour les agences et promoteurs français.",
-      "corridors.p1": "Nous apportons des acheteurs qualifiés du Golfe — investisseurs privés, family offices, grandes fortunes — à vos biens et programmes français.",
-      "corridors.f1": "Sourcing et qualification d'acheteurs sur les marchés du CCG",
-      "corridors.f2": "Présentation multilingue de votre portefeuille en arabe et en anglais",
-      "corridors.f3": "Médiation culturelle et linguistique jusqu'à la signature",
-      "corridors.f4": "Mises en relation confidentielles hors marché lorsque pertinent",
-      "corridors.dir2": "Golfe → France", "corridors.h2": "Pour investisseurs et acheteurs du Golfe.",
-      "corridors.p2": "Nous ouvrons le marché français à vos conditions — biens pré-sélectionnés, démarches clarifiées, intermédiaires français gérés dans votre langue.",
-      "corridors.g1": "Accès choisi à l'immobilier résidentiel et d'investissement français",
-      "corridors.g2": "Lien direct avec promoteurs, notaires et agents",
-      "corridors.g3": "Navigation transparente du cadre juridique et fiscal français",
-      "corridors.g4": "Conseil de bout en bout en arabe, français ou anglais",
+      "corridors.lede": "Les deux sens sont menés depuis le même bureau, dans les mêmes langues, avec la même rigueur de prospection. Nous identifions et engageons les leads. La suite vous appartient.",
+      "corridors.dir1": "France → MENA", "corridors.h1": "Pour les agences et promoteurs français.",
+      "corridors.p1": "Prospection à froid multilingue auprès d'acheteurs MENA — des prospects qualifiés délivrés directement dans votre boîte. Une fois la présentation faite, la conversation vous appartient.",
+      "corridors.f1": "Cold email et messages LinkedIn en arabe, français et anglais",
+      "corridors.f2": "Listes de prospects MENA construites et qualifiées — investisseurs privés, family offices, grandes fortunes",
+      "corridors.f3": "Copies d'outreach rédigées par des locuteurs natifs",
+      "corridors.f4": "Présentations qualifiées livrées dans votre boîte — c'est là que notre rôle s'arrête",
+      "corridors.dir2": "MENA → France", "corridors.h2": "Pour investisseurs et acheteurs MENA.",
+      "corridors.p2": "Prospection à froid multilingue auprès d'agences, promoteurs et notaires français — leur inventaire et leurs projets mis sur votre radar. À partir de la présentation, vous gérez directement.",
+      "corridors.g1": "Cold email et messages LinkedIn en français et en anglais",
+      "corridors.g2": "Listes ciblées d'agences, promoteurs et notaires français",
+      "corridors.g3": "Copies d'outreach rédigées par des locuteurs natifs dans votre langue préférée",
+      "corridors.g4": "Présentations directes dans votre boîte — vous prenez la suite",
       "approach.eyebrow": "Approche", "approach.title": "Quatre principes, un seul bureau.",
-      "approach.h1": "Discrétion", "approach.p1": "Noms, prix et intentions ne circulent qu'entre les parties concernées.",
-      "approach.h2": "Maîtrise native", "approach.p2": "Chaque échange, document et négociation se déroule en français, arabe ou anglais sans perte de traduction.",
-      "approach.h3": "Flux pré-qualifié", "approach.p3": "Uniquement des acheteurs et des biens qui correspondent — épargnant aux deux côtés les attentes désalignées.",
-      "approach.h4": "Direct, sans intermédiaires", "approach.p4": "Un interlocuteur unique sur les deux juridictions. Pas de chaîne de relais, pas de responsabilité diluée.",
+      "approach.h1": "Discrétion", "approach.p1": "Listes, ciblages et copies d'outreach restent entre le bureau et le client. Rien ne circule au-delà.",
+      "approach.h2": "Maîtrise native", "approach.p2": "Chaque email, chaque DM, chaque message de prospection se déroule en français, arabe ou anglais sans perte de traduction.",
+      "approach.h3": "Flux qualifié", "approach.p3": "Uniquement des prospects qui correspondent — une prospection qui révèle de l'intention réelle, pas du bruit.",
+      "approach.h4": "Direct, sans intermédiaires", "approach.p4": "Un seul bureau mène la prospection, de bout en bout. Pas d'agences, pas de relais, pas de message dilué.",
       "contact.eyebrow": "Contact",
-      "contact.lede": "Que vous soyez un promoteur français en quête de demande golfique, ou un principal du Golfe à la recherche d'opportunités françaises, la porte s'ouvre par un seul message. Réponses personnelles et rapides.",
+      "contact.lede": "Que vous soyez un promoteur français en quête d'acheteurs MENA, ou un principal MENA à la recherche d'opportunités françaises, la porte s'ouvre par un seul message. Réponses personnelles et rapides.",
       "contact.write": "Écrire à", "footer.rights": "Tous droits réservés."
     },
     ar: {
       "nav.about": "المعبر", "nav.services": "الممرّان", "nav.approach": "المنهج", "nav.contact": "تواصل",
-      "hero.eyebrow": "وساطة عقارية خاصة · بين فرنسا والخليج",
+      "hero.eyebrow": "مكتب خاص · تواصل بارد بين فرنسا و MENA",
       "hero.title.1": "نقطة", "hero.title.2": "عبور.",
-      "hero.sub": "بين فرنسا <span class=\"amp\">و</span> الخليج.",
-      "hero.lede": "تربط معبر بين الوكالات والمطورين العقاريين في فرنسا والمشترين العرب من الخليج، وبين المستثمرين الخليجيين وفرص عقارية فرنسية مختارة. متعددة اللغات. خاصة. ومباشرة.",
+      "hero.sub": "بين فرنسا <span class=\"amp\">و</span> MENA.",
+      "hero.lede": "تدير معبر حملات تواصل بارد متعدّدة اللغات لصالح بائعي العقارات الفرنسيين الباحثين عن مشترين من منطقة MENA — وللمستثمرين من MENA الباحثين عن فرص فرنسية. بريد إلكتروني ورسائل LinkedIn. ثلاث لغات. مكتب واحد.",
       "hero.cta": "ابدأ المحادثة",
-      "hero.m1.label": "سوقان", "hero.m2.label": "ثلاث لغات", "hero.m3.label": "مكتب واحد", "hero.m3.value": "مباشر · خاص",
+      "hero.m1.label": "سوقان", "hero.m2.label": "ثلاث لغات", "hero.m3.label": "مكتب واحد", "hero.m3.value": "تواصل بارد",
       "scroll": "اسحب",
       "name.eyebrow": "من العربية", "name.translit": "مَعْبَر — نقطة عبور",
       "name.context": "ممرٌّ بين ضفّتين كانتا لتبقيا منفصلتين.",
@@ -1456,36 +1476,36 @@
       "crossing.s1.h": "من الكلمة، يبدأ العمل.",
       "crossing.s1.p": "يستمد <strong>معبر</strong> جذره من اللغة العربية — نقطة عبور تربط ما بين ضفّتين كانتا لتبقيا منفصلتين.",
       "crossing.s2.h": "سوقان، عتبةٌ واحدة.",
-      "crossing.s2.p": "بالنسبة للبائعين الفرنسيين، يبدو سوق الخليج معقداً: نوايا شراء عالية، شبكات متفرقة، حواجز لغوية. وبالنسبة للمشتري الخليجي، تزخر السوق الفرنسية بالفرص لكنها مثقلة بالتشريعات وأعراف غير مكتوبة.",
+      "crossing.s2.p": "بالنسبة للبائعين الفرنسيين، ينتشر مشترو MENA عبر شبكات وقنوات ولغات متعدّدة — يصعب الوصول إليهم بلغتهم. وبالنسبة لمستثمري MENA، يوجد البائعون الفرنسيون نظريّاً، لكنّهم نادراً ما يصلون إلى صناديق بريدهم.",
       "crossing.s3.h": "نحن نقف تماماً على ذلك الخط.",
-      "crossing.s3.p": "مهمّتنا أن نُترجم — لا الكلمات وحدها، بل التوقعات والمواعيد والثقة. مكتبٌ واحد، ثلاث لغات، يُعتنى بكلا الجانبين بالقدر ذاته.",
-      "crossing.label.france": "فرنسا", "crossing.label.gulf": "الخليج",
+      "crossing.s3.p": "مهمّتنا أن نفتح الأبواب — تواصل بارد متعدّد اللغات، عبر البريد الإلكتروني ورسائل LinkedIn، يضع جهات اتصال مؤهّلة أمامك. عند تسليم التعريف، ينتهي دورنا ويبدأ دورك.",
+      "crossing.label.france": "فرنسا", "crossing.label.gulf": "MENA",
       "numbers.eyebrow": "المكتب", "numbers.title": "بالأرقام.",
-      "numbers.l1": "أسواق", "numbers.p1": "فرنسا ودول مجلس التعاون الخليجي، خدمة من البداية إلى الإغلاق.",
+      "numbers.l1": "أسواق", "numbers.p1": "فرنسا ومنطقة MENA — حملات تواصل تُدار في الاتجاهين.",
       "numbers.l2": "لغات", "numbers.p2": "العربية والفرنسية والإنجليزية — مستوى أصلي، دون انحراف في الترجمة.",
       "numbers.l3": "مكتب", "numbers.p3": "نقطة اتصال واحدة عبر القضائَين.",
-      "marquee.text": "خصوصية ✦ إتقان أصلي ✦ تدفّق مؤهَّل ✦ مباشر، دون وسطاء ✦",
+      "marquee.text": "تواصل بارد ✦ إتقان أصلي ✦ عملاء محتملون مؤهّلون ✦ مباشر، دون وسطاء ✦",
       "corridors.eyebrow": "العمل", "corridors.title": "ممرّان.",
-      "corridors.lede": "يُدار الاتجاهان من المكتب ذاته، باللغات ذاتها، وبالعناية ذاتها. لا وسطاء. لا تلفون عربي.",
-      "corridors.dir1": "فرنسا ← الخليج", "corridors.h1": "للوكالات والمطورين الفرنسيين.",
-      "corridors.p1": "نقدّم لكم مشترين خليجيين مؤهَّلين — مستثمرين خاصين، مكاتب عائلية، وأصحاب ثروات عالية — لمعروضكم العقاري ومشاريعكم في فرنسا.",
-      "corridors.f1": "تحديد وتأهيل المشترين عبر أسواق دول الخليج",
-      "corridors.f2": "عرض متعدد اللغات لمعروضكم بالعربية والإنجليزية",
-      "corridors.f3": "وساطة ثقافية ولغوية حتى الإغلاق",
-      "corridors.f4": "تقديمات سرية خارج السوق عند الاقتضاء",
-      "corridors.dir2": "الخليج ← فرنسا", "corridors.h2": "للمستثمرين والمشترين الخليجيين.",
-      "corridors.p2": "نفتح لكم السوق الفرنسي بشروطكم — عقارات مدروسة سلفاً، إجراءات مبسّطة، وسطاء فرنسيون يُتعامل معهم بلغتكم.",
-      "corridors.g1": "وصول منتقى إلى العقار السكني والاستثماري الفرنسي",
-      "corridors.g2": "تواصل مباشر مع المطورين والموثّقين والوكلاء",
-      "corridors.g3": "وضوح كامل في الإطار القانوني والضريبي الفرنسي",
-      "corridors.g4": "استشارة شاملة بالعربية أو الفرنسية أو الإنجليزية",
+      "corridors.lede": "يُدار الاتجاهان من المكتب ذاته، باللغات ذاتها، وبحرفية التواصل ذاتها. نحن نكشف العملاء المحتملين. ما يلي التعريف يخصّكم.",
+      "corridors.dir1": "فرنسا ← MENA", "corridors.h1": "للوكالات والمطورين الفرنسيين.",
+      "corridors.p1": "تواصل بارد متعدّد اللغات مع مشترين من منطقة MENA — عملاء محتملون مؤهّلون يصلون مباشرة إلى صندوق بريدكم. بمجرد تسليم التعريف، تكون المحادثة لكم.",
+      "corridors.f1": "تواصل بارد عبر البريد الإلكتروني ورسائل LinkedIn بالعربية والفرنسية والإنجليزية",
+      "corridors.f2": "قوائم مرشّحين من MENA — مستثمرون خاصون، مكاتب عائلية، أصحاب ثروات عالية",
+      "corridors.f3": "نسخ تواصل بأقلام ناطقين أصليين في كل تسلسل",
+      "corridors.f4": "تعريفات مؤهّلة تُسلَّم إلى صندوق بريدكم — هنا ينتهي دورنا",
+      "corridors.dir2": "MENA ← فرنسا", "corridors.h2": "للمستثمرين والمشترين من MENA.",
+      "corridors.p2": "تواصل بارد متعدّد اللغات مع وكالات ومطوّرين وموثّقين فرنسيين — معروضهم ومشاريعهم في رادارك. من لحظة التعريف، أنت تتولّى الباقي.",
+      "corridors.g1": "تواصل بارد عبر البريد الإلكتروني ورسائل LinkedIn بالفرنسية والإنجليزية",
+      "corridors.g2": "قوائم مستهدفة من الوكالات والمطوّرين والموثّقين الفرنسيين",
+      "corridors.g3": "نسخ تواصل بأقلام ناطقين أصليين بلغتك المفضّلة",
+      "corridors.g4": "تعريفات مباشرة إلى صندوق بريدك — تأخذ المحادثة من هناك",
       "approach.eyebrow": "المنهج", "approach.title": "أربعة مبادئ، مكتب واحد.",
-      "approach.h1": "الخصوصية", "approach.p1": "الأسماء والأسعار والنوايا لا تُتداول إلا بين الأطراف المعنية.",
-      "approach.h2": "إتقان أصلي", "approach.p2": "كل محادثة ووثيقة ومفاوضة تتم بالفرنسية أو العربية أو الإنجليزية دون انحراف في الترجمة.",
-      "approach.h3": "تدفّق مؤهَّل سلفاً", "approach.p3": "نقدّم فقط مشترين ومعروضاً يتوافقان — موفّرين على الطرفين عناءَ التوقعات غير المتطابقة.",
-      "approach.h4": "مباشر، دون وسطاء", "approach.p4": "نقطة اتصال واحدة عبر القضائَين. لا سلاسل ترحيل، ولا مسؤولية مُموَّهة.",
+      "approach.h1": "الخصوصية", "approach.p1": "القوائم والاستهداف ونسخ التواصل تبقى بين المكتب والعميل. لا شيء يتجاوز ذلك.",
+      "approach.h2": "إتقان أصلي", "approach.p2": "كلّ بريد، كلّ رسالة، كلّ جملة تواصل بارد تجري بالفرنسية أو العربية أو الإنجليزية دون انحراف في الترجمة.",
+      "approach.h3": "تدفّق مؤهّل", "approach.p3": "فقط المرشّحون الذين يتوافقون — تواصل يكشف نوايا حقيقية، لا ضوضاء.",
+      "approach.h4": "مباشر، دون وسطاء", "approach.p4": "مكتب واحد يدير التواصل من البداية إلى النهاية. لا وكالات، لا حلقات وسيطة، لا رسالة مخفّفة.",
       "contact.eyebrow": "تواصل",
-      "contact.lede": "سواء كنت مطوّراً فرنسياً يبحث عن طلب خليجي، أو موكِّلاً خليجياً يبحث عن فرص فرنسية، يُفتح الباب برسالة واحدة. الردود شخصية وسريعة.",
+      "contact.lede": "سواء كنت مطوّراً فرنسياً يبحث عن مشترين من MENA، أو موكِّلاً من MENA يبحث عن فرص فرنسية، يُفتح الباب برسالة واحدة. الردود شخصية وسريعة.",
       "contact.write": "للمراسلة", "footer.rights": "جميع الحقوق محفوظة."
     }
   };
@@ -1528,9 +1548,9 @@
     });
     try { localStorage.setItem("maabare.lang", lang); } catch(e){}
     const titles = {
-      en: "Maabare — A crossing point between France and the Gulf",
-      fr: "Maabare — Un point de passage entre la France et le Golfe",
-      ar: "معبر — نقطة عبور بين فرنسا والخليج"
+      en: "Maabare — A crossing point between France and MENA",
+      fr: "Maabare — Un point de passage entre la France et MENA",
+      ar: "معبر — نقطة عبور بين فرنسا و MENA"
     };
     document.title = titles[lang];
   }
