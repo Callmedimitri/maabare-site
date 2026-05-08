@@ -14,7 +14,2049 @@
 <meta property="og:url" content="https://maabare.com/" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maabare — A crossing point between France and MENA</title>
+<meta name="description" content="Maabare runs multilingual cold outreach connecting French real estate sellers with MENA buyers — and MENA investors with French opportunities." />
+<meta name="theme-color" content="#f4e8c1" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14080f" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:title" content="Maabare — A crossing point between France and MENA" />
+<meta property="og:description" content="Private Franco–MENA cold outreach desk for real estate." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://maabare.com/" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+<style>
+  /* ═══ TOKENS ═══ */
+  :root {
+    --bg:        #f4e8c1;
+    --paper:     #ffffff;
+    --ink:       #56123d;
+    --body:      #3a1029;
+    --muted:     #8a5a76;
+    --rule:      rgba(86, 18, 61, 0.18);
+    --hairline:  rgba(86, 18, 61, 0.10);
+    --shadow:    0 1px 0 rgba(86, 18, 61, 0.04), 0 30px 56px -28px rgba(86, 18, 61, 0.22);
+
+    --inv-bg:    #56123d;
+    --inv-paper: #3a0c2b;
+    --inv-fg:    #f4e8c1;
+    --inv-body:  rgba(244, 232, 193, 0.78);
+    --inv-rule:  rgba(244, 232, 193, 0.20);
+
+    --display: "Shrikhand", "Cooper Black", Georgia, serif;
+    --sans:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --arabic:  "Tajawal", "IBM Plex Sans Arabic", "Geeza Pro", sans-serif;
+
+    --container: 1280px;
+    --pad: clamp(20px, 5vw, 64px);
+
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:        #14080f;
+      --paper:     #000000;
+      --ink:       #f4e8c1;
+      --body:      #e8d8a8;
+      --muted:     #a89a7a;
+      --rule:      rgba(244, 232, 193, 0.18);
+      --hairline:  rgba(244, 232, 193, 0.10);
+      --shadow:    0 1px 0 rgba(0,0,0,0.4), 0 30px 56px -28px rgba(0,0,0,0.7);
+
+      --inv-bg:    #f4e8c1;
+      --inv-paper: #ffffff;
+      --inv-fg:    #56123d;
+      --inv-body:  #3a1029;
+      --inv-rule:  rgba(86, 18, 61, 0.20);
+    }
+  }
+
+  /* ═══ BASE ═══ */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--body);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    transition: background-color .3s ease, color .3s ease;
+  }
+  html[dir="rtl"] body { font-family: var(--arabic); line-height: 1.85; }
+
+  a { color: var(--ink); text-decoration: none; transition: opacity .2s ease; }
+  a:hover { opacity: 0.78; }
+  ::selection { background: var(--ink); color: var(--bg); }
+  img, svg { max-width: 100%; display: block; }
+
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 var(--pad); }
+  section { padding: clamp(72px, 11vw, 144px) 0; position: relative; }
+
+  /* ═══ SCROLL PROGRESS BAR (top) ═══ */
+  .scroll-progress {
+    position: fixed; top: 0; left: 0;
+    height: 2px;
+    background: var(--ink);
+    width: 0%;
+    z-index: 100;
+    transition: width .08s linear;
+    will-change: width;
+  }
+
+  /* ═══ TYPE PRIMITIVES ═══ */
+  .display {
+    font-family: var(--display);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  html[dir="rtl"] .display { font-family: var(--arabic); font-weight: 900; letter-spacing: 0; }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 600;
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .eyebrow .star { width: 10px; height: 10px; flex-shrink: 0; color: currentColor; }
+  html[dir="rtl"] .eyebrow { letter-spacing: 0; }
+
+  .section-title {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: clamp(44px, 6.6vw, 96px);
+    line-height: 1;
+    letter-spacing: -0.012em;
+    margin: 18px 0 0;
+    font-weight: 400;
+  }
+  html[dir="rtl"] .section-title { font-family: var(--arabic); font-weight: 900; line-height: 1.2; letter-spacing: 0; }
+
+  /* ═══ NAV ═══ */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(160%) blur(12px);
+    -webkit-backdrop-filter: saturate(160%) blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s ease;
+  }
+  .nav.scrolled { border-bottom-color: var(--hairline); }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0;
+  }
+  .logo {
+    font-family: var(--display);
+    font-size: 26px;
+    color: var(--ink);
+    letter-spacing: 0.005em;
+    display: inline-flex; align-items: baseline; gap: 9px;
+    font-weight: 400;
+  }
+  .logo .logo-mark {
+    width: 7px; height: 7px;
+    background: var(--ink);
+    border-radius: 50%;
+    transform: translateY(-3px);
+  }
+  html[dir="rtl"] .logo { font-family: var(--arabic); font-weight: 900; }
+
+  .nav-links {
+    display: flex; align-items: center;
+    gap: clamp(18px, 2.6vw, 32px);
+    list-style: none; margin: 0; padding: 0;
+    font-size: 13.5px;
+  }
+  .nav-links a { color: var(--body); }
+  .nav-links a:hover { opacity: 1; color: var(--ink); }
+
+  .lang-switch {
+    display: inline-flex; padding: 4px;
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--paper) 60%, transparent);
+  }
+  .lang-switch button {
+    appearance: none; background: transparent; border: none; cursor: pointer; font: inherit;
+    font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 6px 13px; border-radius: 999px;
+    color: var(--muted); transition: all .2s ease;
+  }
+  .lang-switch button:hover { color: var(--ink); }
+  .lang-switch button.active { background: var(--ink); color: var(--bg); font-weight: 600; }
+  @media (max-width: 760px) { .nav-links li.nav-item { display: none; } }
+
+  /* ═══ HERO (full-viewport) ═══ */
+  .hero {
+    min-height: 92vh;
+    padding-top: clamp(48px, 7vw, 96px);
+    padding-bottom: clamp(48px, 7vw, 96px);
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: clamp(28px, 4vw, 64px);
+    align-items: center;
+  }
+  @media (max-width: 920px) { .hero-grid { grid-template-columns: 1fr; } }
+
+  .hero-eyebrow {
+    margin-bottom: clamp(28px, 4vw, 40px);
+    opacity: 0;
+    animation: fadeUp 0.8s var(--ease) 0.2s forwards;
+  }
+
+  .hero-title {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: clamp(60px, 11.5vw, 156px);
+    line-height: 0.92;
+    letter-spacing: -0.018em;
+    margin: 0 0 18px;
+    font-weight: 400;
+  }
+  html[dir="rtl"] .hero-title { font-family: var(--arabic); font-weight: 900; line-height: 1.16; letter-spacing: 0; }
+  .hero-title .word {
+    display: inline-block;
+    transform: translateY(110%);
+    opacity: 0;
+    animation: wordRise 0.95s var(--ease) forwards;
+  }
+  .hero-title .word:nth-child(1) { animation-delay: 0.35s; }
+  .hero-title .word:nth-child(2) { animation-delay: 0.50s; }
+  .hero-title .word:nth-child(3) { animation-delay: 0.65s; }
+  .hero-title .word:nth-child(4) { animation-delay: 0.80s; }
+
+  .hero-sub {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: clamp(26px, 3.6vw, 44px);
+    line-height: 1.1;
+    margin: 0 0 36px;
+    max-width: 22ch;
+    opacity: 0;
+    animation: fadeUp 0.9s var(--ease) 1.0s forwards;
+  }
+  html[dir="rtl"] .hero-sub { font-family: var(--arabic); font-weight: 700; line-height: 1.4; }
+  .hero-sub .amp {
+    display: inline-block;
+    font-style: italic;
+    transform: translateY(2px);
+    opacity: 0.75;
+    margin: 0 4px;
+  }
+  html[dir="rtl"] .hero-sub .amp { font-style: normal; transform: none; opacity: 1; }
+
+  .hero-lede {
+    font-size: clamp(16px, 1.3vw, 18px);
+    color: var(--body);
+    max-width: 56ch;
+    line-height: 1.62;
+    margin: 0 0 36px;
+    opacity: 0;
+    animation: fadeUp 0.9s var(--ease) 1.15s forwards;
+  }
+  .hero-cta-wrap {
+    opacity: 0;
+    animation: fadeUp 0.9s var(--ease) 1.3s forwards;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 17px 30px;
+    background: var(--ink); color: var(--bg);
+    border-radius: 999px;
+    font-size: 13.5px; letter-spacing: 0.06em; font-weight: 600;
+    transition: all .25s ease;
+  }
+  .btn-primary:hover { transform: translateY(-1px); opacity: 1; }
+  .btn-primary .arrow { transition: transform .25s ease; }
+  .btn-primary:hover .arrow { transform: translateX(4px); }
+  html[dir="rtl"] .btn-primary:hover .arrow { transform: translateX(-4px); }
+
+  /* Hero seal */
+  .hero-seal {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    opacity: 0;
+    animation: sealIn 1.4s var(--ease) 0.5s forwards;
+    will-change: transform;
+  }
+  .hero-seal-card {
+    background: var(--paper);
+    border-radius: 999px;
+    padding: clamp(20px, 3vw, 32px);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 1 / 1;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-seal svg {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    color: var(--ink);
+    animation: sealRotate 80s linear infinite;
+  }
+  @media (max-width: 920px) { .hero-seal { margin-top: 16px; } .hero-seal-card { max-width: 280px; } }
+  @media (prefers-reduced-motion: reduce) { .hero-seal svg { animation: none; } }
+
+  /* Scroll cue */
+  .scroll-cue {
+    position: absolute;
+    bottom: 10px;
+    left: 50%; transform: translateX(-50%);
+    color: var(--muted);
+    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+    font-weight: 600;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.6s forwards;
+  }
+  html[dir="rtl"] .scroll-cue { letter-spacing: 0; }
+  .scroll-cue .arrow {
+    width: 1px; height: 28px;
+    background: currentColor;
+    animation: scrollPulse 2.2s var(--ease-soft) infinite;
+    transform-origin: top;
+  }
+
+  @keyframes fadeIn { to { opacity: 1; } }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes wordRise {
+    from { opacity: 0; transform: translateY(110%); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes sealIn {
+    from { opacity: 0; transform: scale(0.85) rotate(-8deg); }
+    to   { opacity: 1; transform: scale(1) rotate(0deg); }
+  }
+  @keyframes sealRotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  @keyframes scrollPulse {
+    0%   { transform: scaleY(0); transform-origin: top; }
+    50%  { transform: scaleY(1); transform-origin: top; }
+    51%  { transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  /* Hero markers */
+  .hero-markers {
+    margin-top: clamp(40px, 5vw, 64px);
+    background: var(--paper);
+    border-radius: 6px;
+    padding: 4px;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
+    gap: 0;
+    align-items: stretch;
+    opacity: 0;
+    animation: fadeUp 1s var(--ease) 1.45s forwards;
+  }
+  .marker, .marker-cap { padding: 22px clamp(20px, 2.6vw, 32px); }
+  .marker { border-inline-end: 1px solid var(--hairline); }
+  .hero-markers .marker:last-of-type { border-inline-end: none; }
+  .marker-cap {
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+    border-inline-end: 1px solid var(--hairline);
+  }
+  .hero-markers .marker-cap:last-child { border-inline-end: none; }
+  .marker-cap .star { width: 14px; height: 14px; }
+  .marker .label {
+    font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600; margin-bottom: 8px;
+  }
+  html[dir="rtl"] .marker .label { letter-spacing: 0; }
+  .marker .value {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: clamp(20px, 2.4vw, 26px);
+    line-height: 1.05;
+  }
+  html[dir="rtl"] .marker .value { font-family: var(--arabic); font-weight: 900; }
+  @media (max-width: 760px) {
+    .hero-markers { grid-template-columns: 1fr; }
+    .marker, .marker-cap { border-inline-end: none; border-bottom: 1px solid var(--hairline); }
+    .hero-markers > *:last-child { border-bottom: none; }
+    .marker-cap { padding: 12px; }
+  }
+
+  /* ═══ NAME — pinned chapter ═══ */
+  .name-chapter {
+    height: 200vh;
+    position: relative;
+  }
+  .name-pin {
+    position: sticky; top: 0;
+    height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .name-stage {
+    text-align: center;
+    width: 100%;
+    padding: 0 var(--pad);
+  }
+  .name-stage .name-eyebrow {
+    margin-bottom: clamp(20px, 3vw, 32px);
+    justify-content: center;
+  }
+  .name-stage .arabic {
+    font-family: var(--arabic);
+    font-weight: 900;
+    color: var(--ink);
+    font-size: clamp(140px, 24vw, 360px);
+    line-height: 0.95;
+    letter-spacing: 0;
+    margin: 0;
+    will-change: transform, opacity;
+  }
+  .name-stage .translit {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: clamp(20px, 2vw, 28px);
+    margin: clamp(10px, 1.5vw, 18px) 0 0;
+    opacity: 0.85;
+  }
+  html[dir="rtl"] .name-stage .translit { font-family: var(--arabic); font-weight: 700; }
+  .name-stage .context {
+    margin: clamp(28px, 4vw, 48px) auto 0;
+    max-width: 56ch;
+    color: var(--body);
+    font-size: clamp(17px, 1.5vw, 22px);
+    line-height: 1.5;
+  }
+
+  /* ═══ CROSSING — pinned feature ═══ */
+  .crossing { background: var(--bg); }
+  .crossing-head {
+    margin-bottom: clamp(48px, 6vw, 80px);
+  }
+  .crossing-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 5vw, 80px);
+    align-items: start;
+    position: relative;
+  }
+  @media (max-width: 920px) { .crossing-feature { grid-template-columns: 1fr; } }
+
+  .crossing-visual {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+  }
+  @media (max-width: 920px) { .crossing-visual { position: static; } }
+
+  .postcard {
+    background: var(--paper);
+    border-radius: 6px;
+    padding: clamp(20px, 3vw, 32px);
+    box-shadow: var(--shadow);
+    color: var(--ink);
+  }
+  .postcard svg.postcard-art {
+    width: 100%; height: auto;
+    color: var(--ink);
+  }
+
+  .crossing-steps {
+    display: flex; flex-direction: column;
+    gap: clamp(36px, 4vw, 64px);
+  }
+  .crossing-step {
+    min-height: 30vh;
+  }
+  .crossing-step .step-num {
+    font-family: var(--display);
+    font-size: clamp(22px, 2vw, 26px);
+    color: var(--ink);
+    opacity: 0.5;
+    margin: 0 0 12px;
+  }
+  html[dir="rtl"] .crossing-step .step-num { font-family: var(--arabic); font-weight: 900; }
+  .crossing-step h3 {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: clamp(28px, 3.4vw, 40px);
+    line-height: 1.1;
+    margin: 0 0 18px;
+    font-weight: 400;
+  }
+  html[dir="rtl"] .crossing-step h3 { font-family: var(--arabic); font-weight: 900; line-height: 1.4; }
+  .crossing-step p {
+    font-size: clamp(16px, 1.25vw, 18px);
+    color: var(--body);
+    line-height: 1.65;
+    margin: 0;
+  }
+  .crossing-step strong { color: var(--ink); font-weight: 600; }
+  .crossing-step em { font-style: italic; color: var(--ink); }
+
+  /* ═══ NUMBERS — inverted, animated ═══ */
+  .numbers {
+    background: var(--inv-bg);
+    color: var(--inv-fg);
+    padding: clamp(96px, 14vw, 180px) 0;
+  }
+  .numbers .eyebrow { color: var(--inv-fg); }
+  .numbers .section-title { color: var(--inv-fg); margin-bottom: clamp(56px, 7vw, 96px); }
+
+  .nums-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(40px, 5vw, 80px);
+  }
+  @media (max-width: 760px) { .nums-grid { grid-template-columns: 1fr; gap: 56px; } }
+
+  .num-cell {
+    text-align: start;
+    border-top: 1px solid var(--inv-rule);
+    padding-top: clamp(24px, 3vw, 40px);
+  }
+  .num-big {
+    font-family: var(--display);
+    color: var(--inv-fg);
+    font-size: clamp(140px, 22vw, 280px);
+    line-height: 0.85;
+    margin: 0;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    display: block;
+    will-change: opacity, transform;
+  }
+  html[dir="rtl"] .num-big { font-family: var(--arabic); font-weight: 900; line-height: 1.05; }
+  .num-cell .label {
+    font-family: var(--display);
+    color: var(--inv-fg);
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.1;
+    margin: 12px 0 12px;
+    font-weight: 400;
+    opacity: 0.92;
+  }
+  html[dir="rtl"] .num-cell .label { font-family: var(--arabic); font-weight: 900; }
+  .num-cell p {
+    color: var(--inv-body);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 28ch;
+  }
+
+  /* ═══ MARQUEE strip ═══ */
+  .marquee {
+    background: var(--bg);
+    padding: clamp(28px, 3vw, 40px) 0;
+    overflow: hidden;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 56px;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+    color: var(--ink);
+  }
+  html[dir="rtl"] .marquee-track { animation-direction: reverse; }
+  .marquee-track > span {
+    font-family: var(--display);
+    font-size: clamp(22px, 3vw, 38px);
+    line-height: 1;
+    white-space: nowrap;
+    display: inline-flex; align-items: center; gap: 56px;
+    flex-shrink: 0;
+  }
+  html[dir="rtl"] .marquee-track > span { font-family: var(--arabic); font-weight: 900; }
+  .marquee-track .star { width: 16px; height: 16px; color: var(--ink); opacity: 0.6; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+  /* ═══ CORRIDORS ═══ */
+  .corridors-head {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: clamp(24px, 4vw, 64px);
+    align-items: end;
+    margin-bottom: clamp(40px, 5vw, 64px);
+  }
+  @media (max-width: 880px) { .corridors-head { grid-template-columns: 1fr; align-items: start; } }
+  .corridors-head p {
+    color: var(--body);
+    font-size: clamp(16px, 1.3vw, 18.5px);
+    margin: 0;
+    max-width: 56ch;
+  }
+
+  .corridors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(18px, 2vw, 28px);
+  }
+  @media (max-width: 880px) { .corridors-grid { grid-template-columns: 1fr; } }
+
+  .ticket {
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow);
+    transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+  }
+  .ticket:hover { transform: translateY(-4px); }
+  .ticket.surface-paper { background: var(--paper); color: var(--ink); }
+  .ticket.surface-ink   { background: var(--inv-bg);  color: var(--inv-fg); }
+
+  .ticket-header {
+    padding: clamp(28px, 3vw, 40px) clamp(28px, 4vw, 48px) clamp(20px, 2vw, 28px);
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 24px;
+    position: relative;
+  }
+  .ticket-no {
+    font-family: var(--display);
+    font-size: clamp(56px, 7vw, 92px);
+    line-height: 0.85;
+    color: var(--ink);
+    margin: 0;
+  }
+  .ticket.surface-ink .ticket-no { color: var(--inv-fg); }
+  html[dir="rtl"] .ticket-no { font-family: var(--arabic); font-weight: 900; }
+  .ticket-icon {
+    width: 56px; height: 64px;
+    flex-shrink: 0;
+    color: var(--ink);
+    opacity: 0.85;
+  }
+  .ticket.surface-ink .ticket-icon { color: var(--inv-fg); }
+
+  .ticket-perf {
+    height: 1px;
+    margin: 0 clamp(28px, 4vw, 48px);
+    background-image: linear-gradient(to right, currentColor 50%, transparent 50%);
+    background-size: 8px 1px;
+    background-repeat: repeat-x;
+    opacity: 0.4;
+  }
+  .ticket.surface-paper .ticket-perf { color: var(--ink); }
+  .ticket.surface-ink .ticket-perf   { color: var(--inv-fg); }
+
+  .ticket-body {
+    padding: clamp(20px, 3vw, 32px) clamp(28px, 4vw, 48px) clamp(28px, 4vw, 44px);
+  }
+  .ticket-direction {
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+  .ticket.surface-ink .ticket-direction { color: var(--inv-fg); opacity: 0.85; }
+  html[dir="rtl"] .ticket-direction { letter-spacing: 0; }
+  .ticket h3 {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: clamp(26px, 3.2vw, 36px);
+    line-height: 1.1;
+    margin: 0 0 18px;
+    font-weight: 400;
+  }
+  .ticket.surface-ink h3 { color: var(--inv-fg); }
+  html[dir="rtl"] .ticket h3 { font-family: var(--arabic); font-weight: 900; line-height: 1.4; }
+  .ticket p {
+    color: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 24px;
+  }
+  .ticket.surface-ink p { color: var(--inv-body); }
+  .ticket ul { list-style: none; padding: 0; margin: 0; }
+  .ticket li {
+    padding: 12px 0;
+    border-top: 1px solid var(--hairline);
+    font-size: 14px;
+    color: var(--body);
+    display: flex; gap: 12px; align-items: flex-start;
+    line-height: 1.55;
+  }
+  .ticket.surface-ink li { color: var(--inv-body); border-top-color: var(--inv-rule); }
+  .ticket li .star { width: 9px; height: 9px; margin-top: 6px; flex-shrink: 0; color: currentColor; opacity: 0.65; }
+
+  /* ═══ APPROACH ═══ */
+  .approach { background: var(--inv-bg); color: var(--inv-fg); }
+  .approach .eyebrow { color: var(--inv-fg); }
+  .approach .section-title { color: var(--inv-fg); }
+  .approach-head { margin-bottom: clamp(48px, 6vw, 80px); max-width: 30ch; }
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(24px, 3vw, 40px);
+  }
+  @media (max-width: 980px) { .approach-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .approach-grid { grid-template-columns: 1fr; } }
+  .pillar { padding-top: 28px; position: relative; }
+  .pillar::before {
+    content: ""; display: block;
+    width: 100%; height: 1px;
+    background: var(--inv-rule);
+    margin-bottom: 24px; margin-top: -28px;
+  }
+  .pillar-mark {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 14px;
+  }
+  .pillar-mark .star { width: 11px; height: 11px; color: var(--inv-fg); opacity: 0.85; }
+  .pillar-num {
+    font-family: var(--display);
+    font-size: 22px;
+    color: var(--inv-fg);
+    line-height: 1;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+  html[dir="rtl"] .pillar-num { font-family: var(--arabic); font-weight: 900; }
+  .pillar h4 {
+    font-family: var(--display);
+    color: var(--inv-fg);
+    font-size: clamp(22px, 2.4vw, 28px);
+    line-height: 1.15;
+    margin: 0 0 14px;
+    font-weight: 400;
+  }
+  html[dir="rtl"] .pillar h4 { font-family: var(--arabic); font-weight: 900; line-height: 1.4; }
+  .pillar p { font-size: 14.5px; color: var(--inv-body); line-height: 1.65; margin: 0; }
+
+  /* ═══ CONTACT ═══ */
+  .contact { background: var(--bg); }
+  .contact-inner {
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    max-width: 880px; margin: 0 auto;
+  }
+  .greetings {
+    display: flex; flex-direction: column; align-items: center;
+    gap: clamp(2px, 0.6vw, 6px);
+    margin: clamp(24px, 3vw, 36px) 0 clamp(28px, 3vw, 40px);
+  }
+  .greetings span {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: clamp(48px, 9vw, 116px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    display: block;
+    will-change: transform, opacity;
+  }
+  .greetings .ar {
+    font-family: var(--arabic);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+  .greetings .fr { opacity: 0.92; }
+  .greetings .en { opacity: 0.85; }
+
+  .contact-lede {
+    font-size: clamp(17px, 1.4vw, 20px);
+    color: var(--body);
+    max-width: 50ch;
+    margin: 0 auto clamp(36px, 5vw, 56px);
+  }
+
+  .envelope {
+    background: var(--paper);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: clamp(28px, 3vw, 40px) clamp(40px, 5vw, 64px);
+    color: var(--ink);
+    position: relative;
+    display: inline-flex; flex-direction: column; align-items: center; gap: 14px;
+    transition: transform .35s var(--ease);
+  }
+  .envelope:hover { transform: translateY(-3px); opacity: 1; }
+  .envelope .stamp {
+    position: absolute;
+    top: -14px;
+    inset-inline-end: -14px;
+    width: 72px; height: 72px;
+    color: var(--ink);
+  }
+  .envelope .label {
+    font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600;
+  }
+  html[dir="rtl"] .envelope .label { letter-spacing: 0; }
+  .envelope .addr {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 400;
+  }
+
+  /* ═══ FOOTER ═══ */
+  footer {
+    border-top: 1px solid var(--hairline);
+    padding: 32px 0;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 16px; flex-wrap: wrap;
+  }
+  .footer-inner a { color: var(--muted); }
+  .footer-inner a:hover { color: var(--ink); }
+  .footer-mark { font-family: var(--display); color: var(--ink); font-size: 17px; font-weight: 400; }
+  html[dir="rtl"] .footer-mark { font-family: var(--arabic); font-weight: 900; }
+
+  /* ═══ SCROLL REVEAL (generic) ═══ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.95s var(--ease), transform 0.95s var(--ease);
+  }
+  .reveal.in { opacity: 1; transform: none; }
+
+  .reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.85s var(--ease), transform 0.85s var(--ease);
+  }
+  .reveal-stagger.in > *           { opacity: 1; transform: none; }
+  .reveal-stagger.in > *:nth-child(1) { transition-delay: 0.05s; }
+  .reveal-stagger.in > *:nth-child(2) { transition-delay: 0.18s; }
+  .reveal-stagger.in > *:nth-child(3) { transition-delay: 0.31s; }
+  .reveal-stagger.in > *:nth-child(4) { transition-delay: 0.44s; }
+
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.94);
+    transition: opacity 1.1s var(--ease), transform 1.1s var(--ease);
+  }
+  .reveal-scale.in { opacity: 1; transform: scale(1); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-stagger > *, .reveal-scale { opacity: 1; transform: none; transition: none; }
+    .hero-title .word, .hero-eyebrow, .hero-sub, .hero-lede, .hero-cta-wrap, .hero-seal, .hero-markers, .scroll-cue {
+      animation: none; opacity: 1; transform: none;
+    }
+  }
+
+  /* ═══ LEAD POPUP ═══ */
+  .popup-overlay {
+    position: fixed; inset: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--ink) 32%, transparent);
+    backdrop-filter: blur(8px) saturate(140%);
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    opacity: 0; pointer-events: none;
+    transition: opacity .55s var(--ease);
+  }
+  .popup-overlay.is-open { opacity: 1; pointer-events: auto; }
+
+  .popup-card {
+    position: relative;
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 14px;
+    padding: clamp(28px, 4vw, 44px);
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 30px 80px -20px rgba(0,0,0,0.35), 0 1px 0 rgba(0,0,0,0.04);
+    transform: translateY(28px) scale(0.96);
+    opacity: 0;
+    transition: transform .7s var(--ease), opacity .55s var(--ease);
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+  }
+  .popup-overlay.is-open .popup-card { transform: none; opacity: 1; }
+
+  .popup-close {
+    position: absolute;
+    top: 14px;
+    inset-inline-end: 14px;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; line-height: 1;
+    transition: background-color .2s, color .2s;
+  }
+  .popup-close:hover { background: var(--bg); color: var(--ink); }
+
+  .popup-eyebrow {
+    font-size: 10.5px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 600;
+    display: inline-flex; align-items: center; gap: 10px;
+    margin: 0 0 16px;
+  }
+  .popup-eyebrow .star { width: 11px; height: 11px; }
+  html[dir="rtl"] .popup-eyebrow { letter-spacing: 0; }
+
+  .popup-title {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: clamp(28px, 3.6vw, 38px);
+    line-height: 1.05;
+    margin: 0 0 12px;
+    font-weight: 400;
+  }
+  html[dir="rtl"] .popup-title { font-family: var(--arabic); font-weight: 900; line-height: 1.4; }
+
+  .popup-lede {
+    font-size: 14.5px;
+    color: var(--body);
+    line-height: 1.55;
+    margin: 0 0 22px;
+  }
+
+  .popup-form { display: flex; flex-direction: column; gap: 12px; }
+  .popup-form label { display: flex; flex-direction: column; gap: 6px; }
+  .popup-form .label-text {
+    font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600;
+  }
+  html[dir="rtl"] .popup-form .label-text { letter-spacing: 0; }
+
+  .popup-form input,
+  .popup-form select,
+  .popup-form textarea {
+    appearance: none; -webkit-appearance: none;
+    font: inherit; font-size: 15px;
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 11px 14px;
+    color: var(--ink);
+    transition: border-color .2s, box-shadow .2s;
+    width: 100%;
+  }
+  .popup-form input:focus,
+  .popup-form select:focus,
+  .popup-form textarea:focus {
+    outline: none;
+    border-color: var(--ink);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--ink) 14%, transparent);
+  }
+  .popup-form textarea { min-height: 60px; resize: vertical; line-height: 1.45; }
+  .popup-form select {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none'><path d='M1 1l5 5 5-5' stroke='%2356123d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 11px;
+    padding-inline-end: 36px;
+  }
+  html[dir="rtl"] .popup-form select { background-position: left 14px center; padding-inline-end: 14px; padding-inline-start: 36px; }
+
+  .popup-submit {
+    margin-top: 6px;
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 12px;
+    padding: 15px 24px;
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    border-radius: 999px;
+    font: inherit;
+    font-size: 13px; letter-spacing: 0.06em; font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform .25s var(--ease), background-color .25s var(--ease);
+  }
+  html[dir="rtl"] .popup-submit { letter-spacing: 0; }
+  .popup-submit:hover { transform: translateY(-1px); background: var(--body); }
+  .popup-submit .arrow { transition: transform .25s var(--ease); }
+  .popup-submit:hover .arrow { transform: translateX(4px); }
+  html[dir="rtl"] .popup-submit:hover .arrow { transform: translateX(-4px); }
+
+  .popup-privacy {
+    font-size: 11.5px;
+    color: var(--muted);
+    margin: 12px 0 0;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .popup-success { display: none; text-align: center; padding: 12px 0; }
+  .popup-success.is-shown { display: block; }
+  .popup-success .star {
+    width: 36px; height: 36px;
+    color: var(--ink);
+    margin: 0 auto 18px;
+  }
+  .popup-success h4 {
+    font-family: var(--display);
+    font-size: 28px;
+    color: var(--ink);
+    margin: 0 0 10px;
+    font-weight: 400;
+  }
+  html[dir="rtl"] .popup-success h4 { font-family: var(--arabic); font-weight: 900; }
+  .popup-success p {
+    color: var(--body);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 480px) {
+    .popup-card { padding: 32px 22px; }
+    .popup-title { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- Re-usable icons -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-star" viewBox="0 0 24 24">
+    <path d="M 12,1.6 L 13.6,10.4 L 22.4,12 L 13.6,13.6 L 12,22.4 L 10.4,13.6 L 1.6,12 L 10.4,10.4 Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-eiffel" viewBox="0 0 56 64">
+    <g transform="translate(28,62)">
+      <path d="M -22,0 L -18,-10 L -11,-18 L -9,-34 L 9,-34 L 11,-18 L 18,-10 L 22,0" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <line x1="-18" y1="-10" x2="18" y2="-10" stroke="currentColor" stroke-width="0.9"/>
+      <line x1="-9" y1="-34" x2="9" y2="-34" stroke="currentColor" stroke-width="0.9"/>
+      <path d="M -9,-34 L -6,-46 L 6,-46 L 9,-34" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M -6,-46 L -3,-56 L 3,-56 L 6,-46" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <line x1="0" y1="-56" x2="0" y2="-62" stroke="currentColor" stroke-width="1.4"/>
+    </g>
+  </symbol>
+  <symbol id="i-dome" viewBox="0 0 56 64">
+    <g transform="translate(28,62)">
+      <rect x="-24" y="-8" width="48" height="8" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <rect x="-22" y="-30" width="3" height="22" fill="none" stroke="currentColor" stroke-width="1"/>
+      <rect x="19" y="-30" width="3" height="22" fill="none" stroke="currentColor" stroke-width="1"/>
+      <path d="M -22.5,-30 L -20.5,-34 L -18.5,-30 Z" fill="none" stroke="currentColor" stroke-width="0.9"/>
+      <path d="M 18.5,-30 L 20.5,-34 L 22.5,-30 Z" fill="none" stroke="currentColor" stroke-width="0.9"/>
+      <path d="M -14,-8 Q -14,-32 0,-36 Q 14,-32 14,-8" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <line x1="0" y1="-36" x2="0" y2="-42" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="0" cy="-43.5" r="1.4" fill="currentColor"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ═══════════ NAV ═══════════ -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo" aria-label="Maabare">
+      <span class="logo-mark"></span>
+      <span>Maabare</span>
+    </a>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="#crossing" data-i18n="nav.about">The Crossing</a></li>
+      <li class="nav-item"><a href="#corridors" data-i18n="nav.services">Corridors</a></li>
+      <li class="nav-item"><a href="#approach" data-i18n="nav.approach">Approach</a></li>
+      <li class="nav-item"><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button data-lang="en" class="active">EN</button>
+          <button data-lang="fr">FR</button>
+          <button data-lang="ar">AR</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow eyebrow">
+          <svg class="star"><use href="#i-star"/></svg>
+          <span data-i18n="hero.eyebrow">Private Franco–MENA outreach desk</span>
+        </div>
+        <h1 class="hero-title" id="heroTitle">
+          <span class="word">A</span> <span class="word">crossing</span> <span class="word">point.</span>
+        </h1>
+        <p class="hero-sub" data-i18n-html="hero.sub">Between France <span class="amp">&amp;</span> MENA.</p>
+        <p class="hero-lede" data-i18n="hero.lede">Maabare runs multilingual cold outreach for French real estate sellers seeking MENA buyers — and for MENA investors seeking French opportunities. Email and LinkedIn DMs. Three languages. One desk.</p>
+        <div class="hero-cta-wrap">
+          <a href="#contact" class="btn-primary">
+            <span data-i18n="hero.cta">Begin a conversation</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-seal">
+        <div class="hero-seal-card">
+          <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <path id="seal-ring" d="M 120,28 a 92,92 0 1,1 -0.001,0"/>
+            </defs>
+            <!-- Outer ring -->
+            <circle cx="120" cy="120" r="110" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <!-- Curved text on the rim -->
+            <text font-family="Inter, sans-serif" font-size="9.2" font-weight="600" letter-spacing="3.2" fill="currentColor">
+              <textPath href="#seal-ring" startOffset="0">MAABARE · معبر · CROSSING POINT · MAABARE · معبر · CROSSING POINT</textPath>
+            </text>
+            <!-- Inner concentric rings (astrolabe feel) -->
+            <circle cx="120" cy="120" r="86" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.4"/>
+            <circle cx="120" cy="120" r="74" fill="none" stroke="currentColor" stroke-width="0.9" opacity="0.85"/>
+
+            <!-- Compass rose -->
+            <g transform="translate(120,120)">
+              <!-- Four cardinal arrows (filled, prominent) -->
+              <g fill="currentColor">
+                <path d="M 0,-64 L 9,-3 L 0,3 L -9,-3 Z"/>
+                <path d="M 0,64 L 9,3 L 0,-3 L -9,3 Z"/>
+                <path d="M 64,0 L 3,9 L -3,0 L 3,-9 Z"/>
+                <path d="M -64,0 L -3,9 L 3,0 L -3,-9 Z"/>
+              </g>
+              <!-- Four intercardinal lines (subtle) -->
+              <g stroke="currentColor" stroke-width="1.1" opacity="0.55">
+                <line x1="14" y1="-14" x2="42" y2="-42"/>
+                <line x1="-14" y1="-14" x2="-42" y2="-42"/>
+                <line x1="14" y1="14" x2="42" y2="42"/>
+                <line x1="-14" y1="14" x2="-42" y2="42"/>
+              </g>
+              <!-- Center: the crossing point -->
+              <circle cx="0" cy="0" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
+              <circle cx="0" cy="0" r="3.6" fill="currentColor"/>
+            </g>
+
+            <!-- Outer cardinal tick marks beyond the rim -->
+            <g stroke="currentColor" stroke-width="0.8" opacity="0.5">
+              <line x1="120" y1="14" x2="120" y2="22"/>
+              <line x1="120" y1="218" x2="120" y2="226"/>
+              <line x1="14" y1="120" x2="22" y2="120"/>
+              <line x1="218" y1="120" x2="226" y2="120"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-markers">
+      <div class="marker-cap" aria-hidden="true"><svg class="star"><use href="#i-star"/></svg></div>
+      <div class="marker">
+        <div class="label" data-i18n="hero.m1.label">Two markets</div>
+        <div class="value">FR · MENA</div>
+      </div>
+      <div class="marker">
+        <div class="label" data-i18n="hero.m2.label">Three languages</div>
+        <div class="value">FR · EN · AR</div>
+      </div>
+      <div class="marker">
+        <div class="label" data-i18n="hero.m3.label">One desk</div>
+        <div class="value" data-i18n="hero.m3.value">Direct · Discreet</div>
+      </div>
+      <div class="marker-cap" aria-hidden="true"><svg class="star"><use href="#i-star"/></svg></div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span data-i18n="scroll">Scroll</span>
+    <span class="arrow"></span>
+  </div>
+</section>
+
+<!-- ═══════════ NAME — pinned chapter ═══════════ -->
+<section class="name-chapter" id="crossing" aria-labelledby="name-h">
+  <div class="name-pin">
+    <div class="name-stage" id="nameStage">
+      <div class="eyebrow name-eyebrow">
+        <svg class="star"><use href="#i-star"/></svg>
+        <span data-i18n="name.eyebrow">From the Arabic</span>
+      </div>
+      <div class="arabic" id="nameArabic">معبر</div>
+      <p class="translit" id="nameTranslit" data-i18n="name.translit">Maʿbar — a crossing point</p>
+      <p class="context" id="nameContext" data-i18n="name.context">A passage between two places that would otherwise remain apart.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CROSSING — sticky postcard feature ═══════════ -->
+<section class="crossing">
+  <div class="container">
+    <div class="crossing-head reveal">
+      <div class="eyebrow">
+        <svg class="star"><use href="#i-star"/></svg>
+        <span data-i18n="crossing.eyebrow">The Practice</span>
+      </div>
+      <h2 class="section-title" id="name-h" data-i18n="crossing.title">A name. A passage. A practice.</h2>
+    </div>
+
+    <div class="crossing-feature">
+      <!-- Sticky postcard -->
+      <div class="crossing-visual">
+        <div class="postcard reveal-scale">
+          <svg class="postcard-art" viewBox="0 0 1280 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <rect x="20" y="20" width="1240" height="480" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <rect x="32" y="32" width="1216" height="456" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.55"/>
+            <g fill="currentColor" opacity="0.85">
+              <use href="#i-star" x="48" y="48" width="16" height="16"/>
+              <use href="#i-star" x="1216" y="48" width="16" height="16"/>
+              <use href="#i-star" x="48" y="456" width="16" height="16"/>
+              <use href="#i-star" x="1216" y="456" width="16" height="16"/>
+            </g>
+
+            <!-- French stamp -->
+            <g transform="translate(78, 78)">
+              <rect x="0" y="0" width="118" height="148" fill="none" stroke="currentColor" stroke-width="1.2"/>
+              <g fill="currentColor" opacity="0.6">
+                <circle cx="0" cy="14" r="1.5"/><circle cx="0" cy="42" r="1.5"/><circle cx="0" cy="74" r="1.5"/><circle cx="0" cy="106" r="1.5"/><circle cx="0" cy="134" r="1.5"/>
+                <circle cx="118" cy="14" r="1.5"/><circle cx="118" cy="42" r="1.5"/><circle cx="118" cy="74" r="1.5"/><circle cx="118" cy="106" r="1.5"/><circle cx="118" cy="134" r="1.5"/>
+                <circle cx="14" cy="0" r="1.5"/><circle cx="42" cy="0" r="1.5"/><circle cx="76" cy="0" r="1.5"/><circle cx="104" cy="0" r="1.5"/>
+                <circle cx="14" cy="148" r="1.5"/><circle cx="42" cy="148" r="1.5"/><circle cx="76" cy="148" r="1.5"/><circle cx="104" cy="148" r="1.5"/>
+              </g>
+              <rect x="8" y="8" width="102" height="132" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+              <g transform="translate(59, 96) scale(0.85)"><use href="#i-eiffel" x="-28" y="-62"/></g>
+              <text x="59" y="124" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" letter-spacing="1.6" font-weight="600" fill="currentColor">RÉPUBLIQUE</text>
+              <text x="59" y="134" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" letter-spacing="1.6" font-weight="600" fill="currentColor">FRANÇAISE</text>
+            </g>
+
+            <!-- MENA stamp -->
+            <g transform="translate(1084, 78)">
+              <rect x="0" y="0" width="118" height="148" fill="none" stroke="currentColor" stroke-width="1.2"/>
+              <g fill="currentColor" opacity="0.6">
+                <circle cx="0" cy="14" r="1.5"/><circle cx="0" cy="42" r="1.5"/><circle cx="0" cy="74" r="1.5"/><circle cx="0" cy="106" r="1.5"/><circle cx="0" cy="134" r="1.5"/>
+                <circle cx="118" cy="14" r="1.5"/><circle cx="118" cy="42" r="1.5"/><circle cx="118" cy="74" r="1.5"/><circle cx="118" cy="106" r="1.5"/><circle cx="118" cy="134" r="1.5"/>
+                <circle cx="14" cy="0" r="1.5"/><circle cx="42" cy="0" r="1.5"/><circle cx="76" cy="0" r="1.5"/><circle cx="104" cy="0" r="1.5"/>
+                <circle cx="14" cy="148" r="1.5"/><circle cx="42" cy="148" r="1.5"/><circle cx="76" cy="148" r="1.5"/><circle cx="104" cy="148" r="1.5"/>
+              </g>
+              <rect x="8" y="8" width="102" height="132" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+              <g transform="translate(59, 90) scale(0.95)"><use href="#i-dome" x="-28" y="-62"/></g>
+              <text x="59" y="124" text-anchor="middle" font-family="Tajawal, sans-serif" font-size="14" font-weight="700" fill="currentColor">MENA</text>
+              <text x="59" y="138" text-anchor="middle" font-family="Inter, sans-serif" font-size="6.5" letter-spacing="1.6" font-weight="600" fill="currentColor">REGION</text>
+            </g>
+
+            <!-- Sun + معبر -->
+            <g transform="translate(640, 132)">
+              <circle r="34" fill="none" stroke="currentColor" stroke-width="1.1"/>
+              <circle r="44" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+              <g stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.85">
+                <line x1="0" y1="-50" x2="0" y2="-62"/>
+                <line x1="0" y1="50" x2="0" y2="62"/>
+                <line x1="-50" y1="0" x2="-62" y2="0"/>
+                <line x1="50" y1="0" x2="62" y2="0"/>
+                <line x1="-35" y1="-35" x2="-44" y2="-44"/>
+                <line x1="35" y1="-35" x2="44" y2="-44"/>
+                <line x1="-35" y1="35" x2="-44" y2="44"/>
+                <line x1="35" y1="35" x2="44" y2="44"/>
+              </g>
+              <text x="0" y="11" text-anchor="middle" font-family="Tajawal, sans-serif" font-weight="900" font-size="32" fill="currentColor">معبر</text>
+            </g>
+
+            <path d="M 240,400 Q 640,288 1040,400" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 6" opacity="0.65"/>
+            <circle cx="240" cy="400" r="3.5" fill="currentColor"/>
+            <circle cx="1040" cy="400" r="3.5" fill="currentColor"/>
+            <circle cx="640" cy="316" r="2" fill="currentColor" opacity="0.7"/>
+
+            <line x1="80" y1="430" x2="1200" y2="430" stroke="currentColor" stroke-width="1" stroke-dasharray="2 5" opacity="0.4"/>
+
+            <!-- Eiffel -->
+            <g transform="translate(330, 430)">
+              <path d="M -52,0 L -42,-22 L -26,-42 L -22,-82 L 22,-82 L 26,-42 L 42,-22 L 52,0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <line x1="-42" y1="-22" x2="42" y2="-22" stroke="currentColor" stroke-width="1"/>
+              <line x1="-22" y1="-82" x2="22" y2="-82" stroke="currentColor" stroke-width="1"/>
+              <path d="M -22,-82 L -13,-140 L 13,-140 L 22,-82" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="-18" y1="-110" x2="18" y2="-110" stroke="currentColor" stroke-width="0.7" opacity="0.5"/>
+              <line x1="-13" y1="-140" x2="13" y2="-140" stroke="currentColor" stroke-width="1"/>
+              <path d="M -13,-140 L -6,-186 L 6,-186 L 13,-140" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M -4,-186 L 0,-216 L 4,-186" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="0" y1="-216" x2="0" y2="-232" stroke="currentColor" stroke-width="1.4"/>
+              <circle cx="0" cy="-234" r="1.5" fill="currentColor"/>
+            </g>
+
+            <!-- Arc -->
+            <g transform="translate(490, 430)">
+              <rect x="-50" y="-94" width="100" height="94" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="-50" y1="-84" x2="50" y2="-84" stroke="currentColor" stroke-width="1"/>
+              <line x1="-50" y1="-22" x2="50" y2="-22" stroke="currentColor" stroke-width="1"/>
+              <path d="M -24,0 L -24,-50 Q 0,-72 24,-50 L 24,0" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="-38" y1="-22" x2="-38" y2="-78" stroke="currentColor" stroke-width="0.7" opacity="0.55"/>
+              <line x1="38" y1="-22" x2="38" y2="-78" stroke="currentColor" stroke-width="0.7" opacity="0.55"/>
+            </g>
+
+            <!-- Burj -->
+            <g transform="translate(820, 430)">
+              <path d="M -42,0 L -42,-36 L -34,-36 L -34,-72 L -27,-72 L -27,-108 L -20,-108 L -20,-144 L -14,-144 L -14,-176 L -8,-176 L -8,-208 L -3,-208 L 0,-232 L 3,-208 L 8,-208 L 8,-176 L 14,-176 L 14,-144 L 20,-144 L 20,-108 L 27,-108 L 27,-72 L 34,-72 L 34,-36 L 42,-36 L 42,0 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              <line x1="0" y1="-232" x2="0" y2="-256" stroke="currentColor" stroke-width="1.3"/>
+              <line x1="-34" y1="-58" x2="34" y2="-58" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+              <line x1="-27" y1="-94" x2="27" y2="-94" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+              <line x1="-20" y1="-130" x2="20" y2="-130" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+            </g>
+
+            <!-- Mosque -->
+            <g transform="translate(990, 430)">
+              <rect x="-100" y="-26" width="200" height="26" fill="none" stroke="currentColor" stroke-width="1.4"/>
+              <line x1="-100" y1="-16" x2="100" y2="-16" stroke="currentColor" stroke-width="0.7" opacity="0.5"/>
+              <rect x="-94" y="-104" width="9" height="78" fill="none" stroke="currentColor" stroke-width="1.2"/>
+              <line x1="-94" y1="-78" x2="-85" y2="-78" stroke="currentColor" stroke-width="0.7" opacity="0.55"/>
+              <line x1="-94" y1="-50" x2="-85" y2="-50" stroke="currentColor" stroke-width="0.7" opacity="0.55"/>
+              <path d="M -96,-104 L -89.5,-118 L -83,-104 Z" fill="none" stroke="currentColor" stroke-width="1.1"/>
+              <line x1="-89.5" y1="-118" x2="-89.5" y2="-128" stroke="currentColor" stroke-width="1"/>
+              <rect x="85" y="-104" width="9" height="78" fill="none" stroke="currentColor" stroke-width="1.2"/>
+              <line x1="85" y1="-78" x2="94" y2="-78" stroke="currentColor" stroke-width="0.7" opacity="0.55"/>
+              <line x1="85" y1="-50" x2="94" y2="-50" stroke="currentColor" stroke-width="0.7" opacity="0.55"/>
+              <path d="M 83,-104 L 89.5,-118 L 96,-104 Z" fill="none" stroke="currentColor" stroke-width="1.1"/>
+              <line x1="89.5" y1="-118" x2="89.5" y2="-128" stroke="currentColor" stroke-width="1"/>
+              <path d="M -68,-26 Q -68,-66 -47,-66 Q -26,-66 -26,-26" fill="none" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M 26,-26 Q 26,-66 47,-66 Q 68,-66 68,-26" fill="none" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M -30,-26 Q -30,-94 0,-99 Q 30,-94 30,-26" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <line x1="0" y1="-99" x2="0" y2="-114" stroke="currentColor" stroke-width="1.4"/>
+              <circle cx="0" cy="-117" r="2.2" fill="currentColor"/>
+              <path d="M -3,-126 a 4 4 0 1 0 6 0 a 3 3 0 1 1 -6 0 z" fill="currentColor" opacity="0.85"/>
+            </g>
+
+            <text x="640" y="468" text-anchor="middle" font-family="Shrikhand, serif" font-size="20" letter-spacing="1.2" fill="currentColor">Maabare</text>
+            <text x="410" y="458" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" letter-spacing="4" font-weight="600" fill="currentColor" opacity="0.7" data-i18n="crossing.label.france">FRANCE</text>
+            <text x="900" y="458" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" letter-spacing="4" font-weight="600" fill="currentColor" opacity="0.7" data-i18n="crossing.label.gulf">MENA</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Steps that scroll alongside -->
+      <div class="crossing-steps">
+        <div class="crossing-step reveal">
+          <div class="step-num">01</div>
+          <h3 data-i18n="crossing.s1.h">From the word, the work.</h3>
+          <p data-i18n-html="crossing.s1.p">Maabare takes its name from the Arabic <strong>معبر</strong> (<em>maʿbar</em>) — a crossing point. A passage between two places that would otherwise remain apart.</p>
+        </div>
+        <div class="crossing-step reveal">
+          <div class="step-num">02</div>
+          <h3 data-i18n="crossing.s2.h">Two markets, one threshold.</h3>
+          <p data-i18n="crossing.s2.p">For French sellers, MENA buyers sit behind language and channel barriers — scattered across networks, hard to reach in their language. For MENA investors, French sellers are reachable in theory but rarely surface in their inbox.</p>
+        </div>
+        <div class="crossing-step reveal">
+          <div class="step-num">03</div>
+          <h3 data-i18n="crossing.s3.h">We sit precisely on that line.</h3>
+          <p data-i18n="crossing.s3.p">Our work is to open doors — multilingual cold outreach, by email and LinkedIn DMs, that puts qualified contacts in front of you. The introduction is where our role ends and yours begins.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ NUMBERS — animated counters ═══════════ -->
+<section class="numbers" id="numbers">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">
+        <svg class="star"><use href="#i-star"/></svg>
+        <span data-i18n="numbers.eyebrow">The desk</span>
+      </div>
+      <h2 class="section-title" data-i18n="numbers.title">In numbers.</h2>
+    </div>
+
+    <div class="nums-grid reveal-stagger">
+      <div class="num-cell">
+        <span class="num-big" data-count="2">0</span>
+        <div class="label" data-i18n="numbers.l1">Markets</div>
+        <p data-i18n="numbers.p1">France and MENA — outreach handled in both directions.</p>
+      </div>
+      <div class="num-cell">
+        <span class="num-big" data-count="3">0</span>
+        <div class="label" data-i18n="numbers.l2">Languages</div>
+        <p data-i18n="numbers.p2">Français, العربية, English — native level, no translation drift.</p>
+      </div>
+      <div class="num-cell">
+        <span class="num-big" data-count="1">0</span>
+        <div class="label" data-i18n="numbers.l3">Desk</div>
+        <p data-i18n="numbers.p3">A single point of contact across both jurisdictions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ MARQUEE ═══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span data-i18n="marquee.text">Discretion <svg class="star"><use href="#i-star"/></svg> Native fluency <svg class="star"><use href="#i-star"/></svg> Pre-qualified flow <svg class="star"><use href="#i-star"/></svg> Direct, not layered <svg class="star"><use href="#i-star"/></svg></span>
+    <span data-i18n="marquee.text" aria-hidden="true">Discretion <svg class="star"><use href="#i-star"/></svg> Native fluency <svg class="star"><use href="#i-star"/></svg> Pre-qualified flow <svg class="star"><use href="#i-star"/></svg> Direct, not layered <svg class="star"><use href="#i-star"/></svg></span>
+  </div>
+</div>
+
+<!-- ═══════════ CORRIDORS ═══════════ -->
+<section id="corridors">
+  <div class="container">
+    <div class="corridors-head reveal">
+      <div>
+        <div class="eyebrow">
+          <svg class="star"><use href="#i-star"/></svg>
+          <span data-i18n="corridors.eyebrow">The Work</span>
+        </div>
+        <h2 class="section-title" data-i18n="corridors.title">Two corridors.</h2>
+      </div>
+      <p data-i18n="corridors.lede">Both directions are handled with the same single desk, the same languages, the same standard of care. No relays. No translation telephone.</p>
+    </div>
+
+    <div class="corridors-grid reveal-stagger">
+      <article class="ticket surface-paper">
+        <div class="ticket-header">
+          <div><h3 class="ticket-no">N°&nbsp;01</h3></div>
+          <svg class="ticket-icon" aria-hidden="true"><use href="#i-eiffel"/></svg>
+        </div>
+        <div class="ticket-perf"></div>
+        <div class="ticket-body">
+          <div class="ticket-direction" data-i18n="corridors.dir1">France → MENA</div>
+          <h3 data-i18n="corridors.h1">For French agencies and developers.</h3>
+          <p data-i18n="corridors.p1">Multilingual cold outreach to MENA-based buyers — qualified prospects delivered straight to your inbox. Once the introduction lands, the conversation is yours to run.</p>
+          <ul>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f1">Cold email and LinkedIn DM outreach in Arabic, French, and English</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f2">MENA prospect lists built and qualified — private investors, family offices, HNW individuals</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f3">Native-speaker outreach copy across every sequence</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.f4">Qualified introductions delivered to your inbox — handoff is where we stop</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="ticket surface-ink">
+        <div class="ticket-header">
+          <div><h3 class="ticket-no">N°&nbsp;02</h3></div>
+          <svg class="ticket-icon" aria-hidden="true"><use href="#i-dome"/></svg>
+        </div>
+        <div class="ticket-perf"></div>
+        <div class="ticket-body">
+          <div class="ticket-direction" data-i18n="corridors.dir2">MENA → France</div>
+          <h3 data-i18n="corridors.h2">For MENA-based investors and buyers.</h3>
+          <p data-i18n="corridors.p2">Multilingual cold outreach to French agencies, developers, and notaires — putting their inventory and projects on your radar. From the introduction forward, you handle it directly.</p>
+          <ul>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g1">Cold email and LinkedIn DM outreach in French and English</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g2">Targeted lists of French agencies, developers, and notaires</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g3">Native-speaker outreach copy in your preferred language</span></li>
+            <li><svg class="star"><use href="#i-star"/></svg><span data-i18n="corridors.g4">Direct introductions to your inbox — you take the conversation from there</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ APPROACH ═══════════ -->
+<section class="approach" id="approach">
+  <div class="container">
+    <div class="approach-head reveal">
+      <div class="eyebrow">
+        <svg class="star"><use href="#i-star"/></svg>
+        <span data-i18n="approach.eyebrow">Approach</span>
+      </div>
+      <h2 class="section-title" data-i18n="approach.title">Four principles, one desk.</h2>
+    </div>
+
+    <div class="approach-grid reveal-stagger">
+      <div class="pillar">
+        <div class="pillar-mark"><svg class="star"><use href="#i-star"/></svg><span class="pillar-num">01</span></div>
+        <h4 data-i18n="approach.h1">Discretion</h4>
+        <p data-i18n="approach.p1">Names, prices, and intent travel only between the parties who need to know.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-mark"><svg class="star"><use href="#i-star"/></svg><span class="pillar-num">02</span></div>
+        <h4 data-i18n="approach.h2">Native fluency</h4>
+        <p data-i18n="approach.p2">Every conversation, document, and negotiation moves through French, Arabic, or English without translation drift.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-mark"><svg class="star"><use href="#i-star"/></svg><span class="pillar-num">03</span></div>
+        <h4 data-i18n="approach.h3">Pre-qualified flow</h4>
+        <p data-i18n="approach.p3">Only buyers and listings that match — saving both sides from mismatched expectations.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-mark"><svg class="star"><use href="#i-star"/></svg><span class="pillar-num">04</span></div>
+        <h4 data-i18n="approach.h4">Direct, not layered</h4>
+        <p data-i18n="approach.p4">A single point of contact across both jurisdictions. No relay chains. No diluted accountability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section class="contact" id="contact">
+  <div class="container contact-inner">
+    <div class="reveal">
+      <div class="eyebrow">
+        <svg class="star"><use href="#i-star"/></svg>
+        <span data-i18n="contact.eyebrow">Contact</span>
+      </div>
+    </div>
+    <div class="greetings reveal-stagger" aria-label="Hello">
+      <span class="fr">Bonjour.</span>
+      <span class="ar">السلام عليكم.</span>
+      <span class="en">Hello.</span>
+    </div>
+    <div class="reveal">
+      <p class="contact-lede" data-i18n="contact.lede">Whether you are a French developer seeking MENA buyers, or a MENA-based principal seeking French opportunities, the door opens with a single message. Replies are personal and prompt.</p>
+    </div>
+
+    <a class="envelope reveal" href="mailto:omar@maabare.com">
+      <svg class="stamp" viewBox="0 0 72 72" aria-hidden="true">
+        <rect x="3" y="3" width="66" height="66" fill="none" stroke="currentColor" stroke-width="1"/>
+        <g fill="currentColor" opacity="0.6">
+          <circle cx="3" cy="14" r="1.4"/><circle cx="3" cy="36" r="1.4"/><circle cx="3" cy="58" r="1.4"/>
+          <circle cx="69" cy="14" r="1.4"/><circle cx="69" cy="36" r="1.4"/><circle cx="69" cy="58" r="1.4"/>
+          <circle cx="14" cy="3" r="1.4"/><circle cx="36" cy="3" r="1.4"/><circle cx="58" cy="3" r="1.4"/>
+          <circle cx="14" cy="69" r="1.4"/><circle cx="36" cy="69" r="1.4"/><circle cx="58" cy="69" r="1.4"/>
+        </g>
+        <use href="#i-star" x="24" y="24" width="24" height="24"/>
+      </svg>
+      <span class="label" data-i18n="contact.write">Write to</span>
+      <span class="addr">omar@maabare.com</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> <span class="footer-mark">Maabare</span>. <span data-i18n="footer.rights">All rights reserved.</span></div>
+    <div><a href="mailto:omar@maabare.com">omar@maabare.com</a></div>
+  </div>
+</footer>
+
+<!-- ═══════════ LEAD POPUP ═══════════ -->
+<div class="popup-overlay" id="leadPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" aria-hidden="true">
+  <div class="popup-card">
+    <button class="popup-close" id="popupClose" type="button" aria-label="Close">&times;</button>
+
+    <div id="popupFormWrap">
+      <div class="popup-eyebrow">
+        <svg class="star"><use href="#i-star"/></svg>
+        <span data-i18n="popup.eyebrow">Book a call</span>
+      </div>
+      <h3 class="popup-title" id="popupTitle" data-i18n="popup.title">Let's open a door.</h3>
+      <p class="popup-lede" data-i18n="popup.lede">Tell us which side you're on. We'll reply personally within 24 hours.</p>
+
+      <form class="popup-form" id="leadForm" novalidate>
+        <label>
+          <span class="label-text" data-i18n="popup.field.name">Name</span>
+          <input type="text" name="name" required autocomplete="name" />
+        </label>
+        <label>
+          <span class="label-text" data-i18n="popup.field.email">Email</span>
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>
+          <span class="label-text" data-i18n="popup.field.side">Which side</span>
+          <select name="side" required>
+            <option value="" disabled selected data-i18n="popup.field.side.placeholder">Select one</option>
+            <option value="france-to-mena" data-i18n="popup.field.side.option1">I'm a French agency or developer</option>
+            <option value="mena-to-france" data-i18n="popup.field.side.option2">I'm a MENA investor or buyer</option>
+            <option value="other" data-i18n="popup.field.side.option3">Other / Not sure</option>
+          </select>
+        </label>
+        <label>
+          <span class="label-text" data-i18n="popup.field.note">A short note (optional)</span>
+          <textarea name="note" rows="2"></textarea>
+        </label>
+        <button type="submit" class="popup-submit">
+          <span data-i18n="popup.submit">Book a call</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="popup-privacy" data-i18n="popup.privacy">Your details stay between us.</p>
+      </form>
+    </div>
+
+    <div class="popup-success" id="popupSuccess">
+      <svg class="star"><use href="#i-star"/></svg>
+      <h4 data-i18n="popup.success.title">Thank you.</h4>
+      <p data-i18n="popup.success.body">Your message is on its way. Expect a reply within 24 hours.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ═══ I18N ═══ */
+  const I18N = {
+    en: {
+      "nav.about": "The Crossing", "nav.services": "Corridors", "nav.approach": "Approach", "nav.contact": "Contact",
+      "hero.eyebrow": "Private Franco–MENA outreach desk",
+      "hero.title.1": "A", "hero.title.2": "crossing", "hero.title.3": "point.",
+      "hero.sub": "Between France <span class=\"amp\">&amp;</span> MENA.",
+      "hero.lede": "Maabare runs multilingual cold outreach for French real estate sellers seeking MENA buyers — and for MENA investors seeking French opportunities. Email and LinkedIn DMs. Three languages. One desk.",
+      "hero.cta": "Begin a conversation",
+      "hero.m1.label": "Two markets", "hero.m2.label": "Three languages", "hero.m3.label": "One desk", "hero.m3.value": "Cold outreach",
+      "scroll": "Scroll",
+      "name.eyebrow": "From the Arabic", "name.translit": "Maʿbar — a crossing point",
+      "name.context": "A passage between two places that would otherwise remain apart.",
+      "crossing.eyebrow": "The Practice", "crossing.title": "A name. A passage. A practice.",
+      "crossing.s1.h": "From the word, the work.",
+      "crossing.s1.p": "Maabare takes its name from the Arabic <strong>معبر</strong> (<em>maʿbar</em>) — a crossing point. A passage between two places that would otherwise remain apart.",
+      "crossing.s2.h": "Two markets, one threshold.",
+      "crossing.s2.p": "For French sellers, MENA buyers sit behind language and channel barriers — scattered across networks, hard to reach in their language. For MENA investors, French sellers are reachable in theory but rarely surface in their inbox.",
+      "crossing.s3.h": "We sit precisely on that line.",
+      "crossing.s3.p": "Our work is to open doors — multilingual cold outreach, by email and LinkedIn DMs, that puts qualified contacts in front of you. The introduction is where our role ends and yours begins.",
+      "crossing.label.france": "FRANCE", "crossing.label.gulf": "MENA",
+      "numbers.eyebrow": "The desk", "numbers.title": "In numbers.",
+      "numbers.l1": "Markets", "numbers.p1": "France and MENA — outreach handled in both directions.",
+      "numbers.l2": "Languages", "numbers.p2": "Français, العربية, English — native level, no translation drift.",
+      "numbers.l3": "Desk", "numbers.p3": "A single point of contact across both jurisdictions.",
+      "marquee.text": "Cold outreach ✦ Native fluency ✦ Qualified leads ✦ Direct, not layered ✦",
+      "corridors.eyebrow": "The Work", "corridors.title": "Two corridors.",
+      "corridors.lede": "Both directions are run from the same desk, in the same languages, with the same outreach craft. We surface qualified leads. The relationship that follows is yours.",
+      "corridors.dir1": "France → MENA", "corridors.h1": "For French agencies and developers.",
+      "corridors.p1": "Multilingual cold outreach to MENA-based buyers — qualified prospects delivered straight to your inbox. Once the introduction lands, the conversation is yours to run.",
+      "corridors.f1": "Cold email and LinkedIn DM outreach in Arabic, French, and English",
+      "corridors.f2": "MENA prospect lists built and qualified — private investors, family offices, HNW individuals",
+      "corridors.f3": "Native-speaker outreach copy across every sequence",
+      "corridors.f4": "Qualified introductions delivered to your inbox — handoff is where we stop",
+      "corridors.dir2": "MENA → France", "corridors.h2": "For MENA-based investors and buyers.",
+      "corridors.p2": "Multilingual cold outreach to French agencies, developers, and notaires — putting their inventory and projects on your radar. From the introduction forward, you handle it directly.",
+      "corridors.g1": "Cold email and LinkedIn DM outreach in French and English",
+      "corridors.g2": "Targeted lists of French agencies, developers, and notaires",
+      "corridors.g3": "Native-speaker outreach copy in your preferred language",
+      "corridors.g4": "Direct introductions to your inbox — you take the conversation from there",
+      "approach.eyebrow": "Approach", "approach.title": "Four principles, one desk.",
+      "approach.h1": "Discretion", "approach.p1": "Lists, targeting, and outreach copy stay between the desk and the client. Nothing travels further.",
+      "approach.h2": "Native fluency", "approach.p2": "Every email, every DM, every cold-outreach message moves through French, Arabic, or English without translation drift.",
+      "approach.h3": "Qualified flow", "approach.p3": "Only prospects that match — outreach that surfaces real intent, not noise.",
+      "approach.h4": "Direct, not layered", "approach.p4": "One desk runs the outreach, end to end. No agencies, no relays, no diluted message.",
+      "contact.eyebrow": "Contact",
+      "contact.lede": "Whether you are a French developer seeking MENA buyers, or a MENA-based principal seeking French opportunities, the door opens with a single message. Replies are personal and prompt.",
+      "contact.write": "Write to", "footer.rights": "All rights reserved.",
+      "popup.eyebrow": "Book a call",
+      "popup.title": "Let's open a door.",
+      "popup.lede": "Tell us which side you're on. We'll reply personally within 24 hours.",
+      "popup.field.name": "Name",
+      "popup.field.email": "Email",
+      "popup.field.side": "Which side",
+      "popup.field.side.placeholder": "Select one",
+      "popup.field.side.option1": "I'm a French agency or developer",
+      "popup.field.side.option2": "I'm a MENA investor or buyer",
+      "popup.field.side.option3": "Other / Not sure",
+      "popup.field.note": "A short note (optional)",
+      "popup.submit": "Book a call",
+      "popup.privacy": "Your details stay between us.",
+      "popup.success.title": "Thank you.",
+      "popup.success.body": "Your message is on its way. Expect a reply within 24 hours."
+    },
+    fr: {
+      "nav.about": "Le Passage", "nav.services": "Corridors", "nav.approach": "Approche", "nav.contact": "Contact",
+      "hero.eyebrow": "Bureau privé · prospection franco-MENA",
+      "hero.title.1": "Un", "hero.title.2": "point", "hero.title.3": "de", "hero.title.4": "passage.",
+      "hero.sub": "Entre la France <span class=\"amp\">&amp;</span> MENA.",
+      "hero.lede": "Maabare mène une prospection à froid multilingue pour les vendeurs immobiliers français cherchant des acheteurs MENA — et pour les investisseurs MENA cherchant des opportunités françaises. Email et messages LinkedIn. Trois langues. Un bureau.",
+      "hero.cta": "Engager la conversation",
+      "hero.m1.label": "Deux marchés", "hero.m2.label": "Trois langues", "hero.m3.label": "Un seul bureau", "hero.m3.value": "Prospection à froid",
+      "scroll": "Faire défiler",
+      "name.eyebrow": "De l'arabe", "name.translit": "Maʿbar — un point de passage",
+      "name.context": "Un lien entre deux rives qui resteraient autrement séparées.",
+      "crossing.eyebrow": "La Pratique", "crossing.title": "Un nom. Un passage. Une pratique.",
+      "crossing.s1.h": "Du mot, le travail.",
+      "crossing.s1.p": "Maabare tire son nom de l'arabe <strong>معبر</strong> (<em>maʿbar</em>) — un point de passage. Un lien entre deux rives qui resteraient autrement séparées.",
+      "crossing.s2.h": "Deux marchés, un seul seuil.",
+      "crossing.s2.p": "Pour les vendeurs français, les acheteurs MENA sont éparpillés à travers réseaux, langues et canaux — difficiles à atteindre dans leur langue. Pour les investisseurs MENA, les vendeurs français existent en théorie mais apparaissent rarement dans leur boîte de réception.",
+      "crossing.s3.h": "Nous nous tenons précisément sur cette ligne.",
+      "crossing.s3.p": "Notre travail est d'ouvrir des portes — une prospection à froid multilingue, par email et messages LinkedIn, qui amène des contacts qualifiés jusqu'à vous. La présentation est l'endroit où notre rôle s'arrête et où le vôtre commence.",
+      "crossing.label.france": "LA FRANCE", "crossing.label.gulf": "MENA",
+      "numbers.eyebrow": "Le bureau", "numbers.title": "En chiffres.",
+      "numbers.l1": "Marchés", "numbers.p1": "La France et la zone MENA — prospection menée dans les deux sens.",
+      "numbers.l2": "Langues", "numbers.p2": "Français, العربية, English — niveau natif, sans perte de traduction.",
+      "numbers.l3": "Bureau", "numbers.p3": "Un interlocuteur unique sur les deux juridictions.",
+      "marquee.text": "Prospection à froid ✦ Maîtrise native ✦ Leads qualifiés ✦ Direct, sans intermédiaires ✦",
+      "corridors.eyebrow": "Le Travail", "corridors.title": "Deux corridors.",
+      "corridors.lede": "Les deux sens sont menés depuis le même bureau, dans les mêmes langues, avec la même rigueur de prospection. Nous identifions et engageons les leads. La suite vous appartient.",
+      "corridors.dir1": "France → MENA", "corridors.h1": "Pour les agences et promoteurs français.",
+      "corridors.p1": "Prospection à froid multilingue auprès d'acheteurs MENA — des prospects qualifiés délivrés directement dans votre boîte. Une fois la présentation faite, la conversation vous appartient.",
+      "corridors.f1": "Cold email et messages LinkedIn en arabe, français et anglais",
+      "corridors.f2": "Listes de prospects MENA construites et qualifiées — investisseurs privés, family offices, grandes fortunes",
+      "corridors.f3": "Copies d'outreach rédigées par des locuteurs natifs",
+      "corridors.f4": "Présentations qualifiées livrées dans votre boîte — c'est là que notre rôle s'arrête",
+      "corridors.dir2": "MENA → France", "corridors.h2": "Pour investisseurs et acheteurs MENA.",
+      "corridors.p2": "Prospection à froid multilingue auprès d'agences, promoteurs et notaires français — leur inventaire et leurs projets mis sur votre radar. À partir de la présentation, vous gérez directement.",
+      "corridors.g1": "Cold email et messages LinkedIn en français et en anglais",
+      "corridors.g2": "Listes ciblées d'agences, promoteurs et notaires français",
+      "corridors.g3": "Copies d'outreach rédigées par des locuteurs natifs dans votre langue préférée",
+      "corridors.g4": "Présentations directes dans votre boîte — vous prenez la suite",
+      "approach.eyebrow": "Approche", "approach.title": "Quatre principes, un seul bureau.",
+      "approach.h1": "Discrétion", "approach.p1": "Listes, ciblages et copies d'outreach restent entre le bureau et le client. Rien ne circule au-delà.",
+      "approach.h2": "Maîtrise native", "approach.p2": "Chaque email, chaque DM, chaque message de prospection se déroule en français, arabe ou anglais sans perte de traduction.",
+      "approach.h3": "Flux qualifié", "approach.p3": "Uniquement des prospects qui correspondent — une prospection qui révèle de l'intention réelle, pas du bruit.",
+      "approach.h4": "Direct, sans intermédiaires", "approach.p4": "Un seul bureau mène la prospection, de bout en bout. Pas d'agences, pas de relais, pas de message dilué.",
+      "contact.eyebrow": "Contact",
+      "contact.lede": "Que vous soyez un promoteur français en quête d'acheteurs MENA, ou un principal MENA à la recherche d'opportunités françaises, la porte s'ouvre par un seul message. Réponses personnelles et rapides.",
+      "contact.write": "Écrire à", "footer.rights": "Tous droits réservés.",
+      "popup.eyebrow": "Réserver un appel",
+      "popup.title": "Ouvrons une porte.",
+      "popup.lede": "Dites-nous de quel côté vous êtes. Nous répondons personnellement sous 24 heures.",
+      "popup.field.name": "Nom",
+      "popup.field.email": "Email",
+      "popup.field.side": "Votre côté",
+      "popup.field.side.placeholder": "Sélectionner",
+      "popup.field.side.option1": "Agence ou promoteur français",
+      "popup.field.side.option2": "Investisseur ou acheteur MENA",
+      "popup.field.side.option3": "Autre / Pas sûr",
+      "popup.field.note": "Un mot rapide (optionnel)",
+      "popup.submit": "Réserver l'appel",
+      "popup.privacy": "Vos coordonnées restent entre nous.",
+      "popup.success.title": "Merci.",
+      "popup.success.body": "Votre message est en route. Comptez une réponse sous 24 heures."
+    },
+    ar: {
+      "nav.about": "المعبر", "nav.services": "الممرّان", "nav.approach": "المنهج", "nav.contact": "تواصل",
+      "hero.eyebrow": "مكتب خاص · تواصل بارد بين فرنسا و MENA",
+      "hero.title.1": "نقطة", "hero.title.2": "عبور.",
+      "hero.sub": "بين فرنسا <span class=\"amp\">و</span> MENA.",
+      "hero.lede": "تدير معبر حملات تواصل بارد متعدّدة اللغات لصالح بائعي العقارات الفرنسيين الباحثين عن مشترين من منطقة MENA — وللمستثمرين من MENA الباحثين عن فرص فرنسية. بريد إلكتروني ورسائل LinkedIn. ثلاث لغات. مكتب واحد.",
+      "hero.cta": "ابدأ المحادثة",
+      "hero.m1.label": "سوقان", "hero.m2.label": "ثلاث لغات", "hero.m3.label": "مكتب واحد", "hero.m3.value": "تواصل بارد",
+      "scroll": "اسحب",
+      "name.eyebrow": "من العربية", "name.translit": "مَعْبَر — نقطة عبور",
+      "name.context": "ممرٌّ بين ضفّتين كانتا لتبقيا منفصلتين.",
+      "crossing.eyebrow": "الممارسة", "crossing.title": "اسمٌ. عبورٌ. ممارسة.",
+      "crossing.s1.h": "من الكلمة، يبدأ العمل.",
+      "crossing.s1.p": "يستمد <strong>معبر</strong> جذره من اللغة العربية — نقطة عبور تربط ما بين ضفّتين كانتا لتبقيا منفصلتين.",
+      "crossing.s2.h": "سوقان، عتبةٌ واحدة.",
+      "crossing.s2.p": "بالنسبة للبائعين الفرنسيين، ينتشر مشترو MENA عبر شبكات وقنوات ولغات متعدّدة — يصعب الوصول إليهم بلغتهم. وبالنسبة لمستثمري MENA، يوجد البائعون الفرنسيون نظريّاً، لكنّهم نادراً ما يصلون إلى صناديق بريدهم.",
+      "crossing.s3.h": "نحن نقف تماماً على ذلك الخط.",
+      "crossing.s3.p": "مهمّتنا أن نفتح الأبواب — تواصل بارد متعدّد اللغات، عبر البريد الإلكتروني ورسائل LinkedIn، يضع جهات اتصال مؤهّلة أمامك. عند تسليم التعريف، ينتهي دورنا ويبدأ دورك.",
+      "crossing.label.france": "فرنسا", "crossing.label.gulf": "MENA",
+      "numbers.eyebrow": "المكتب", "numbers.title": "بالأرقام.",
+      "numbers.l1": "أسواق", "numbers.p1": "فرنسا ومنطقة MENA — حملات تواصل تُدار في الاتجاهين.",
+      "numbers.l2": "لغات", "numbers.p2": "العربية والفرنسية والإنجليزية — مستوى أصلي، دون انحراف في الترجمة.",
+      "numbers.l3": "مكتب", "numbers.p3": "نقطة اتصال واحدة عبر القضائَين.",
+      "marquee.text": "تواصل بارد ✦ إتقان أصلي ✦ عملاء محتملون مؤهّلون ✦ مباشر، دون وسطاء ✦",
+      "corridors.eyebrow": "العمل", "corridors.title": "ممرّان.",
+      "corridors.lede": "يُدار الاتجاهان من المكتب ذاته، باللغات ذاتها، وبحرفية التواصل ذاتها. نحن نكشف العملاء المحتملين. ما يلي التعريف يخصّكم.",
+      "corridors.dir1": "فرنسا ← MENA", "corridors.h1": "للوكالات والمطورين الفرنسيين.",
+      "corridors.p1": "تواصل بارد متعدّد اللغات مع مشترين من منطقة MENA — عملاء محتملون مؤهّلون يصلون مباشرة إلى صندوق بريدكم. بمجرد تسليم التعريف، تكون المحادثة لكم.",
+      "corridors.f1": "تواصل بارد عبر البريد الإلكتروني ورسائل LinkedIn بالعربية والفرنسية والإنجليزية",
+      "corridors.f2": "قوائم مرشّحين من MENA — مستثمرون خاصون، مكاتب عائلية، أصحاب ثروات عالية",
+      "corridors.f3": "نسخ تواصل بأقلام ناطقين أصليين في كل تسلسل",
+      "corridors.f4": "تعريفات مؤهّلة تُسلَّم إلى صندوق بريدكم — هنا ينتهي دورنا",
+      "corridors.dir2": "MENA ← فرنسا", "corridors.h2": "للمستثمرين والمشترين من MENA.",
+      "corridors.p2": "تواصل بارد متعدّد اللغات مع وكالات ومطوّرين وموثّقين فرنسيين — معروضهم ومشاريعهم في رادارك. من لحظة التعريف، أنت تتولّى الباقي.",
+      "corridors.g1": "تواصل بارد عبر البريد الإلكتروني ورسائل LinkedIn بالفرنسية والإنجليزية",
+      "corridors.g2": "قوائم مستهدفة من الوكالات والمطوّرين والموثّقين الفرنسيين",
+      "corridors.g3": "نسخ تواصل بأقلام ناطقين أصليين بلغتك المفضّلة",
+      "corridors.g4": "تعريفات مباشرة إلى صندوق بريدك — تأخذ المحادثة من هناك",
+      "approach.eyebrow": "المنهج", "approach.title": "أربعة مبادئ، مكتب واحد.",
+      "approach.h1": "الخصوصية", "approach.p1": "القوائم والاستهداف ونسخ التواصل تبقى بين المكتب والعميل. لا شيء يتجاوز ذلك.",
+      "approach.h2": "إتقان أصلي", "approach.p2": "كلّ بريد، كلّ رسالة، كلّ جملة تواصل بارد تجري بالفرنسية أو العربية أو الإنجليزية دون انحراف في الترجمة.",
+      "approach.h3": "تدفّق مؤهّل", "approach.p3": "فقط المرشّحون الذين يتوافقون — تواصل يكشف نوايا حقيقية، لا ضوضاء.",
+      "approach.h4": "مباشر، دون وسطاء", "approach.p4": "مكتب واحد يدير التواصل من البداية إلى النهاية. لا وكالات، لا حلقات وسيطة، لا رسالة مخفّفة.",
+      "contact.eyebrow": "تواصل",
+      "contact.lede": "سواء كنت مطوّراً فرنسياً يبحث عن مشترين من MENA، أو موكِّلاً من MENA يبحث عن فرص فرنسية، يُفتح الباب برسالة واحدة. الردود شخصية وسريعة.",
+      "contact.write": "للمراسلة", "footer.rights": "جميع الحقوق محفوظة.",
+      "popup.eyebrow": "احجز مكالمة",
+      "popup.title": "لنفتح باباً معاً.",
+      "popup.lede": "أخبرنا في أيّ جانب تقف. نردّ شخصياً خلال 24 ساعة.",
+      "popup.field.name": "الاسم",
+      "popup.field.email": "البريد الإلكتروني",
+      "popup.field.side": "الجانب",
+      "popup.field.side.placeholder": "اختر",
+      "popup.field.side.option1": "وكالة أو مطوّر فرنسي",
+      "popup.field.side.option2": "مستثمر أو مشترٍ من MENA",
+      "popup.field.side.option3": "غير ذلك / غير متأكد",
+      "popup.field.note": "ملاحظة مختصرة (اختياري)",
+      "popup.submit": "احجز المكالمة",
+      "popup.privacy": "تفاصيلك تبقى بيننا.",
+      "popup.success.title": "شكراً.",
+      "popup.success.body": "رسالتك في طريقها. توقّع رداً خلال 24 ساعة."
+    }
+  };
+
+  /* ═══ Localize hero title (word spans) per language ═══ */
+  function setHeroTitle(dict) {
+    const heroTitle = document.getElementById("heroTitle");
+    if (!heroTitle) return;
+    const words = [];
+    let i = 1;
+    while (dict["hero.title." + i]) { words.push(dict["hero.title." + i]); i++; }
+    if (words.length) {
+      heroTitle.innerHTML = words.map(w => '<span class="word">' + w + '</span>').join(' ');
+      // Restart the word animation
+      heroTitle.querySelectorAll('.word').forEach((el, idx) => {
+        el.style.animation = 'none';
+        // Force reflow
+        void el.offsetWidth;
+        el.style.animation = 'wordRise 0.95s var(--ease) ' + (0.35 + idx * 0.15) + 's forwards';
+      });
+    }
+  }
+
+  function setLang(lang) {
+    const dict = I18N[lang];
+    if (!dict) return;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (dict[key]) el.textContent = dict[key];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(el => {
+      const key = el.getAttribute("data-i18n-html");
+      if (dict[key]) el.innerHTML = dict[key];
+    });
+    setHeroTitle(dict);
+    document.querySelectorAll(".lang-switch button").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+    try { localStorage.setItem("maabare.lang", lang); } catch(e){}
+    const titles = {
+      en: "Maabare — A crossing point between France and MENA",
+      fr: "Maabare — Un point de passage entre la France et MENA",
+      ar: "معبر — نقطة عبور بين فرنسا و MENA"
+    };
+    document.title = titles[lang];
+  }
+
+  document.querySelectorAll(".lang-switch button").forEach(btn => {
+    btn.addEventListener("click", () => setLang(btn.dataset.lang));
+  });
+
+  (function initLang() {
+    let lang = null;
+    try { lang = localStorage.getItem("maabare.lang"); } catch(e){}
+    if (!lang) {
+      const nav = (navigator.language || "en").toLowerCase();
+      if (nav.startsWith("fr")) lang = "fr";
+      else if (nav.startsWith("ar")) lang = "ar";
+      else lang = "en";
+    }
+    setLang(lang);
+  })();
+
+  /* ═══ Sticky nav border on scroll ═══ */
+  const nav = document.getElementById("nav");
+  const onScrollNav = () => nav.classList.toggle("scrolled", window.scrollY > 4);
+  document.addEventListener("scroll", onScrollNav, { passive: true });
+  onScrollNav();
+
+  /* ═══ Scroll progress bar ═══ */
+  const progressEl = document.getElementById("scrollProgress");
+  const updateProgress = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const p = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    progressEl.style.width = p + "%";
+  };
+  document.addEventListener("scroll", updateProgress, { passive: true });
+  updateProgress();
+
+  /* ═══ Reveal on scroll (generic) ═══ */
+  const revealEls = document.querySelectorAll(".reveal, .reveal-stagger, .reveal-scale");
+  const revealIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        revealIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -8% 0px" });
+  revealEls.forEach(el => revealIO.observe(el));
+
+  /* ═══ Counter animation ═══ */
+  const counters = document.querySelectorAll(".num-big[data-count]");
+  const animateCounter = (el) => {
+    const target = parseInt(el.getAttribute("data-count"), 10);
+    const duration = 1400;
+    const start = performance.now();
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      // ease-out cubic
+      const e = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(target * e);
+      if (t < 1) requestAnimationFrame(tick);
+      else el.textContent = target;
+    };
+    requestAnimationFrame(tick);
+  };
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCounter(e.target);
+        counterIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(el => counterIO.observe(el));
+
+  /* ═══ Pinned name chapter — scroll-driven scale & fade ═══ */
+  const nameChapter = document.querySelector(".name-chapter");
+  const nameArabic = document.getElementById("nameArabic");
+  const nameTranslit = document.getElementById("nameTranslit");
+  const nameContext = document.getElementById("nameContext");
+  const nameEyebrow = document.querySelector(".name-stage .name-eyebrow");
+  if (nameChapter && nameArabic) {
+    const updateName = () => {
+      const rect = nameChapter.getBoundingClientRect();
+      const total = rect.height - window.innerHeight;
+      const scrolled = -rect.top;
+      const p = Math.max(0, Math.min(1, scrolled / total));
+      // Arabic word: scales up gently and stays
+      const scale = 0.78 + Math.min(0.5, p * 1.6) * 0.5; // grows from 0.78 to ~1.18
+      nameArabic.style.transform = "scale(" + scale.toFixed(3) + ")";
+      // Eyebrow / translit / context fade in at staggered scroll positions
+      const fade = (start, end) => Math.max(0, Math.min(1, (p - start) / (end - start)));
+      if (nameEyebrow)  nameEyebrow.style.opacity  = fade(0.00, 0.18);
+      nameArabic.style.opacity     = fade(0.05, 0.30);
+      if (nameTranslit) nameTranslit.style.opacity = fade(0.30, 0.55);
+      if (nameContext)  nameContext.style.opacity  = fade(0.55, 0.80);
+    };
+    document.addEventListener("scroll", updateName, { passive: true });
+    window.addEventListener("resize", updateName, { passive: true });
+    updateName();
+  }
+
+  /* ═══ Subtle parallax on hero seal ═══ */
+  const seal = document.querySelector(".hero-seal");
+  if (seal && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const onScrollSeal = () => {
+      const y = window.scrollY;
+      seal.style.transform = "translateY(" + (y * -0.06).toFixed(1) + "px)";
+    };
+    document.addEventListener("scroll", onScrollSeal, { passive: true });
+  }
+
+  /* ═══ Year ═══ */
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* ═══ Smooth-scroll anchors (already smooth via CSS) ═══ */
+
+  /* ═══ Lead Popup ═══ */
+  (function leadPopup() {
+    const POPUP_KEY  = "maabare.popup.v1";
+    const POPUP_DELAY = 10000; // 10 seconds
+
+    const overlay  = document.getElementById("leadPopup");
+    const closeBtn = document.getElementById("popupClose");
+    const form     = document.getElementById("leadForm");
+    const formWrap = document.getElementById("popupFormWrap");
+    const success  = document.getElementById("popupSuccess");
+    if (!overlay || !form) return;
+
+    let lastFocus = null;
+
+    function show() {
+      if (overlay.classList.contains("is-open")) return;
+      lastFocus = document.activeElement;
+      overlay.classList.add("is-open");
+      overlay.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        const f = form.querySelector("input[name='name']");
+        if (f) f.focus();
+      }, 600);
+    }
+
+    function hide() {
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    function dismiss() {
+      hide();
+      try { localStorage.setItem(POPUP_KEY, "dismissed"); } catch(e){}
+    }
+
+    // Skip if previously dismissed or submitted
+    let prior = null;
+    try { prior = localStorage.getItem(POPUP_KEY); } catch(e){}
+    if (!prior) setTimeout(show, POPUP_DELAY);
+
+    closeBtn.addEventListener("click", dismiss);
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) dismiss(); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && overlay.classList.contains("is-open")) dismiss();
+    });
+
+    // Form submission via mailto (works without backend on Vercel)
+    // To upgrade: replace this with a fetch() POST to a Formspree / Resend / your own endpoint.
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Manual validation (since novalidate is set so we can style errors uniformly)
+      const name  = form.elements.name.value.trim();
+      const email = form.elements.email.value.trim();
+      const side  = form.elements.side.value;
+      const note  = form.elements.note.value.trim();
+      if (!name || !email || !side) {
+        if (!name)  form.elements.name.focus();
+        else if (!email) form.elements.email.focus();
+        else form.elements.side.focus();
+        return;
+      }
+
+      const sideLabel = {
+        "france-to-mena": "France → MENA (French agency / developer)",
+        "mena-to-france": "MENA → France (MENA investor / buyer)",
+        "other":          "Other / Not sure"
+      }[side] || side;
+
+      const subject = "Book a call — " + name;
+      const body = [
+        "Name: "  + name,
+        "Email: " + email,
+        "Side: "  + sideLabel,
+        "",
+        "Note: " + (note || "(none)"),
+        "",
+        "—",
+        "Sent from maabare.com"
+      ].join("\n");
+
+      const mailtoUrl = "mailto:omar@maabare.com"
+        + "?subject=" + encodeURIComponent(subject)
+        + "&body="    + encodeURIComponent(body);
+
+      // Open the user's email client in a new tab so the popup remains visible
+      window.open(mailtoUrl, "_blank");
+
+      // Show success state
+      formWrap.style.display = "none";
+      success.classList.add("is-shown");
+
+      // Persist so the popup doesn't reappear for this visitor
+      try { localStorage.setItem(POPUP_KEY, "submitted"); } catch(e){}
+
+      // Auto-close after 5 seconds
+      setTimeout(hide, 5000);
+    });
+  })();
+</script>
+
+</body>
+</html>
+https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet" />
 
 <style>
